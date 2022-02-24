@@ -27,11 +27,12 @@
     "parcel": "^2.3.2"
   },
   "scripts": {
-    "build": "parcel docs/index.html",
+    "build": "parcel build docs/index.html",
     "dev": "parcel serve docs/index.html --open",
     "styles": "parcel build scss/fermyon.scss --dist-dir css"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "2.3.2"
+    "@parcel/transformer-sass": "2.3.2",
+    "parcel-bundler": "^1.12.5"
   }
 }
