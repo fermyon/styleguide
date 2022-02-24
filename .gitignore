@@ -1,3 +1,4 @@
+.cache/
 .sass-cache/
 .parcel-cache/
 *.css.map
@@ -5,3 +6,4 @@
 *.scss.map
 dist/
 node_modules/
+yarn-error.log

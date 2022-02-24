@@ -32,7 +32,6 @@
     "styles": "yarn parcel build scss/fermyon.scss --dist-dir css"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "2.3.2",
-    "parcel-bundler": "^1.12.5"
+    "@parcel/transformer-sass": "2.3.2"
   }
 }
