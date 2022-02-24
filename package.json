@@ -27,9 +27,9 @@
     "parcel": "^2.3.2"
   },
   "scripts": {
-    "build": "parcel build docs/index.html",
-    "dev": "parcel serve docs/index.html --open",
-    "styles": "parcel build scss/fermyon.scss --dist-dir css"
+    "build": "yarn parcel build docs/index.html",
+    "dev": " yarn  parcel serve docs/index.html --open",
+    "styles": "yarn parcel build scss/fermyon.scss --dist-dir css"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "2.3.2",
