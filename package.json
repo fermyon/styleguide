@@ -1,0 +1,37 @@
+{
+  "name": "fermyon.com",
+  "version": "0.0.1",
+  "homepage": "https://github.com/flynnduism/fermyon.com#readme",
+  "author": {
+    "name": "Ronan Flynn-Curran",
+    "email": "dev@ronan.design",
+    "url": "https://fermyon.com"
+  },
+  "description": "Re-usable design elements and styles for Fermyon",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flynnduism/fermyon.com.git"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "fermyon",
+    "styleguide",
+    "sass",
+    "design",
+    "responsive"
+  ],
+  "bugs": {
+    "url": "https://github.com/flynnduism/fermyon.com/issues"
+  },
+  "dependencies": {
+    "parcel": "^2.3.2"
+  },
+  "scripts": {
+    "build": "parcel docs/index.html",
+    "dev": "parcel serve docs/index.html --open",
+    "styles": "parcel build scss/fermyon.scss --dist-dir css"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.3.2"
+  }
+}

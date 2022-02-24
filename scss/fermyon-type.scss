@@ -1,0 +1,95 @@
+/* 4.
+   Typography
+*/
+
+body {
+    font-family: $sen;
+    font-size: 16pt;
+    color: $oxfordblue;
+}
+
+article {
+
+    h1, h2, h3 {
+        font-weight: bold;
+    }
+
+    ul, ol, dl, p, blockquote {
+        margin: 1.67rem 0;
+        font-size: 1rem;
+        max-width: 800px;
+    }
+
+    ul li {
+        list-style: disc;
+        list-style-position: outside;
+        line-height: 1.636;
+        margin: 0 0.5rem 0 1.25rem;
+        padding-left: 0.5rem;
+    }
+
+    ol li {
+        list-style-position: outside;
+        line-height: 1.636;
+        margin: 0 0.5rem 0 1.25rem;
+        padding-left: 0.5rem;
+    }
+
+    blockquote,
+    aside {
+        font-size: 1rem;
+        padding: 1.67rem 7.5% 1.67rem 1.5rem !important;
+        margin: 1.5em auto 2.5rem !important;
+
+        p {
+            font-size: 1rem !important;
+            line-height: 1.825;
+            margin: 0 !important;
+        }
+    }
+
+    strong {
+        color: $lightlavender;
+    }
+
+    code {
+        background-color: $darkocean;
+        color: $lavender;
+    }
+
+    a {
+        color: darken($colablue, 12.5%);
+        border-radius: 0.1em;
+        position: relative;
+
+        &:after {
+            position: absolute;
+            text-align: center;
+            background: $colablue;
+            height: 0.125rem;
+            content: " ";
+            display: inline-block;
+            opacity: 0;
+            bottom: -0.2rem;
+            left: 33%;
+            right: 33%;
+            @include transition;
+        }
+
+        &:hover {
+            background: rgba(255,255,255,0.67);
+            color: $colablue;
+
+            &:after {
+                opacity: 1;
+                left: 5%;
+                right: 5%;
+            }
+
+            img + :after {
+                display: none !important;
+                margin-top: -4rem;
+            }
+        }
+    }
+}

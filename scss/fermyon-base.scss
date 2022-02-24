@@ -1,0 +1,344 @@
+/* 3. 
+   Global Base
+*/
+
+html {
+    height: 100%;
+}
+body,
+main {
+    min-height: 100vh;
+    position: relative;
+}
+
+body {
+    background: lighten($lightlavender, 5%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+main {
+    padding: 8.75rem 0 0;
+    min-height: 100vh;
+    margin-bottom: -12rem;
+    z-index: 100;
+}
+
+
+
+#topbar.navbar {
+    background: lighten($lightlavender, 5%);
+    padding-left: 5vw;
+    padding-right: 5vw;
+    border-bottom: 2px solid rgba(255,255,255,0.98);
+    will-change: transform;
+    transition: transform 200ms linear;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    .navbar-burger {
+        width: 5.25rem;
+        height: 5.25rem;
+    }
+
+    .dark-mode {
+        position: absolute;
+        right: 0;
+        top: 1.636rem;
+        display: inline-block;
+        width: 1.5rem;
+        line-height: 1.5;
+        fill: $darkblue;
+    }
+
+    &.headroom--pinned {
+        margin: 0;
+        transform: translateY(0%);
+    }
+    &.headroom--unpinned {
+        transform: translateY(-100%);
+    }
+
+    @keyframes halfSpin {
+        0% {
+          transform: rotate(0);
+        }
+        
+        25% {
+          transform: rotate(180deg);
+          opacity: 1;
+        }
+        
+        38% {
+          opacity: 0.75;
+        }
+        
+        50% {
+          transform: rotate(180deg);
+        }
+        
+        75% {
+          transform: rotate(360deg);
+          opacity: 1;
+        }
+        
+        88% {
+          opacity: 0.75;
+        }
+        
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      
+      .logo {
+        display: inline-block;
+        margin-top: 0;
+        fill: $oxfordblue;
+        position: relative;
+        margin-top: 0.35em;
+
+        svg {
+            max-height: 1.25rem;
+            max-width: 10.625rem;
+            cursor: pointer;
+            position: relative;
+            z-index: 500;
+            fill: $oxfordblue;
+        }
+        
+        &:hover {
+            .spin-back {
+                background-color: white;
+            }
+        }
+        
+        .spin-front {
+          width: 1.133rem;
+          height: 1.133rem;
+          display: inline-block;
+          position: absolute;
+          top: 1.25rem;
+          right: 1.9125rem;
+          border-radius: 50%;
+          z-index: 600;
+          opacity: 1;
+          animation: 4s ease infinite halfSpin;
+          @include transition;
+          
+          em {
+            width: 0.425rem;
+            height: 0.425rem;
+            display: inline-block;
+            top: 0rem;
+            right: 0.05rem;
+            background: #28FFCC;
+            position: absolute;
+            z-index: 700;
+            border-radius: 50%;
+            @include transition;
+          }
+        }
+        .spin-back {
+          width: 1.125rem;
+          height: 1.125rem;
+          display: inline-block;
+          position: absolute;
+          top: 1.295rem;
+          right: 1.875rem;
+          border-radius: 50%;
+          z-index: 400;
+          background: transparent;
+          @include transition;
+        }
+      }
+
+    a.navbar-item {
+        line-height: 3;
+        background: transparent;
+        font-weight: 700;
+    }
+
+    .navbar-menu {
+        a {
+            margin-left: 2vw;
+            position: relative;
+            color: $oxfordblue;
+            @include sen;
+            @include transition;
+            
+            em {
+                position: absolute;
+                left: 45%;
+                right: 45%;
+                bottom: -0.15rem;
+                height: 0.333rem;
+                opacity: 0;
+                background-color: $seagreen;
+                display: inline-block;
+                @include border-radius(1rem, 1rem);
+                @include transition;
+                content: " ";
+            }
+
+            &:hover {
+                em {
+                    left: 25%;
+                    right: 25%;
+                    opacity: 1;
+                }
+            }
+        }
+
+        .button {
+            color: darken($seagreen, 15%);
+            border-color: $seagreen;
+            margin: 1rem 0 0 2.5rem;
+            @include transition;
+
+            &:hover {
+                color: darken($seagreen, 22.5%);
+                background-color: white !important;
+            }
+        }
+    }
+}
+
+footer {
+    background: white;
+    margin: 0 auto 0;
+    padding: 1.25rem 0 0;
+    min-height: 12rem;
+    border-top: 1px solid $lavender;
+    position: relative;
+    z-index: 1400;
+
+    /* top row of links */
+    ul,
+    p {
+        margin: 2rem 0 4rem;
+    }
+
+    p.lead {
+        font-size: 1.25rem;
+        max-width: 67%;
+        line-height: 1.33;
+        margin: -2.5rem 0 0;
+        color: $darkocean
+    }
+
+    h4 {
+        margin: 3rem 0 0;
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: $rust;
+    }
+
+    li {
+        line-height: 2;
+        list-style: none;
+        font-size: 1.125rem;
+    }
+
+    img {
+        max-height: 5rem;
+        margin-top: 1rem;
+    }
+
+    /* bottom row of smaller links */
+    .footer-nav {
+        border-top: 1px solid $lightgray;
+
+        .navbar {
+            padding: 0;
+            background: transparent;
+    
+            .navbar-item {
+                padding: 0 4rem 0 0;
+                font-size: 1rem;
+                line-height: 1.33;
+                color: $lavender;
+
+                a {
+                    color: darken($lightgray, 12.5%);
+                    @include transition;
+
+                    &:hover {
+                        color: darken($lightgray, 42.5%);
+                    }
+                }
+
+                &:last-of-type {
+                    padding-right: 0;
+                }
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+body.dark-theme {
+    background: $oxfordblue;
+    color: white;
+
+    h1, h2, h3, h4, p, li {
+        color: white;
+    }
+
+    #topbar.navbar {
+        background: $oxfordblue;
+        border-color: $darkocean;
+
+        .logo {
+            svg, path {
+                fill: white !important;
+            }
+        }
+
+        .navbar-menu {
+            a {
+                color: $seagreen;
+            }
+
+            .button {
+                border: 3px solid $seagreen;
+
+                &:hover {
+                    background: $seagreen !important;
+                    color: $oxfordblue;
+                }
+            }
+        }
+
+        .dark-mode {
+            svg {
+                fill: $seagreen;
+                transform: rotate(180deg);
+                @include transition;
+            }
+        }
+    }
+
+    footer {
+        background: $oxfordblue;
+        border-color: $darkocean;
+        color: white;
+
+        h4 {
+            color: white;
+        }
+
+        .footer-nav {
+            border-color: darken($oxfordblue, 7.5%);
+        }
+
+        p, li, a {
+            color: $seagreen;
+        }
+    }
+}
