@@ -1,7 +1,7 @@
 {
-  "name": "fermyon.com",
+  "name": "@flynnduism/fermyon-styleguide",
   "version": "0.0.1",
-  "homepage": "https://github.com/flynnduism/fermyon.com#readme",
+  "homepage": "https://github.com/fermyon/styleguide",
   "author": {
     "name": "Ronan Flynn-Curran",
     "email": "dev@ronan.design",
@@ -10,7 +10,7 @@
   "description": "Re-usable design elements and styles for Fermyon",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/flynnduism/fermyon.com.git"
+    "url": "git+https://github.com/fermyon/styleguide.git"
   },
   "license": "Apache-2.0",
   "keywords": [
@@ -21,7 +21,7 @@
     "responsive"
   ],
   "bugs": {
-    "url": "https://github.com/flynnduism/fermyon.com/issues"
+    "url": "https://github.com/fermyon/styleguide/issues"
   },
   "dependencies": {
     "parcel": "^2.3.2"
