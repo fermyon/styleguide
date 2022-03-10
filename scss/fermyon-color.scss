@@ -13,12 +13,18 @@ $colablue:      #0E8FDD;
 
 // Tertiary Shades
 
-$darkblue:      #345995;
+$darkspace:     #213762;
 $darkocean:     #0A455A;
 $darkolive:     #1F7A8C;
+$darkplum:      #525776;
 
 $midgreen:      #1FBCA0;
+$midblue:       #345995;
+
+$lightplum:     #D3C3D9;
 $lightgray:     #D9DBE8;
 $lightlavender: #ECE5EE;
-$lightghost:    #F8F4F9;
 $lightlemon:    #F9F7EE;
+
+// Remap Colors
+$darkblue:      $midblue;

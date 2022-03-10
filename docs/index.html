@@ -35,6 +35,36 @@
     />
     <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../scss/fermyon.scss" />
+
+    <style type="text/css">
+        article section {
+            padding-top: 3.5rem;
+            padding-bottom: 7.5rem;
+        }
+        article p {
+            font-size: 1.125rem;
+            line-height: 1.725;
+        }
+        #color .card figure.image {
+            min-height: 10vw;
+            margin: 0;
+            border: 5px solid transparent;
+            transition: all ease 0.3s;
+            border-radius: 1rem 1rem 0 0;
+        }
+        #color .card figure.image:hover {
+            border-color: rgba(255,255,255,0.5);
+        }
+        #color .card p.subtitle {
+            font-size: 0.875rem;
+        }
+        .styleguide pre {
+            display: inline-block;
+        }
+    </style>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
 </head>
 <body>
     <header class="navbar is-transparent" id="topbar">
@@ -59,13 +89,12 @@
                     <span class="spin-front"><em></em></span> <span class="spin-back"></span>
                 </div>
             </a>
-
         </div>
 
         <div class="navbar-end">
             <div class="navbar-menu">
-                <a class="navbar-item" href="https://fermyon.com">
-                    About
+                <a class="navbar-item external" href="https://fermyon.com">
+                    Main Website
                     <em></em>
                 </a>
                 <a class="dark-mode">
@@ -93,264 +122,852 @@
             </div>
         </div>
     </header>
-    <main>
-        <div class="page-wrap homepage">
-            <section class="container">
-                <div class="content">
-                    <article>
-                        <h1>Styleguide</h1>
-                        <p class="lead">We are building open source, WebAssembly-powered cloud tools, with the aim of simplifying and unlocking new technologies for all.</p>
-                        <h2>Typography</h2>
 
-                        <p>Examples of how different <strong>headings</strong> and <strong>text styles</strong> will look.</p>
+    <main class="is-widescreen is-fullwidth container page-wrap">
+        <div class="columns">
 
-                        <h1>H1 Heading One</h1>
-                        <h2>H2 Heading Two</h2>
-                        <h3>H3 Heading Three</h3>
-                        <h4>H4 Heading Four</h4>
-                        <h5>H5 Heading Five</h5>
+            <div class="column menu-wrap is-narrow">
+                <aside class="menu is-sticky">
+                
+                    <p class="menu-label">
+                        Branding
+                    </p>
+                    <ul class="menu-list">
+                        <li><a href="#color">Color</a></li>
+                        <li><a href="#type">Typography</a></li>
+                        <li><a href="#logo">Logo</a></li>
+                        <li><a href="#illustration">Illustration</a></li>
+                        <li><a href="#guidelines">Guidelines</a></li>
+                    </ul>
+                    <p class="menu-label">
+                        Styling
+                    </p>
+                    <ul class="menu-list">
+                        <li><a href="#layouts">Layouts</a></li>
+                        <li><a href="#ui">User Interfaces</a></li>
+                        <li><a href="#documentation">Documentation</a></li>
+                        <li><a href="#slides">Slides</a></li>
+                    </ul>
+                    <p class="menu-label">
+                        Notes
+                    </p>
+                    <ul class="menu-list">
+                        <li><a href="#developer">Developer Guide</a></li>
+                        <li><a href="#resources">External Resources</a></li>
+                        <li>&nbsp;</li>
+                        <li><a href="https://github.com/fermyon/styleguide" class="button is-round is-outlined is-size-6 is-medium">Styleguide Source</a></li>
+                    </ul>
+                </aside>
+            </div>
+            
+            <article class="column content styleguide">
+                <section id="intro">
+                    <h1>Styleguide</h1>
+                    <p class="lead is-size-4">This document acts as a centralized reference for <a href="https://www.fermyon.com">Fermyon</a> branding, web element styling and design resources.</p>
+                    <p>We are creating and publishing of this styleguide with the goal of having consistent, accessible design patterns that we can use across our documents, products and various user-facing assets.</p>
+                </section>
 
-                        <p>For additional sizing options, see the <a href="https://bulma.io/documentation/helpers/typography-helpers/">bulma
-                            docs here</a>.</p>
+                <section id="color">
+                    <h1 class="title">Color</h1>
+                    <hr class="page-break" />
 
-                            <p>Cosby sweater iphone artisan, squid trust fund photo booth twee blog shoreditch single-origin coffee aesthetic
-                                jean
-                                shorts messenger bag brooklyn butcher. Iphone fap banksy next level put a bird on it, letterpress photo booth
-                                thundercats biodiesel fanny pack etsy banh mi wayfarers. Sustainable four loko dreamcatcher, vegan single-origin
-                                coffee yr cardigan biodiesel williamsburg thundercats salvia master cleanse terry richardson tumblr mcsweeney’s.
-                                Lomo gluten-free salvia you probably haven’t heard of them portland. Mlkshk jean shorts carles, etsy artisan
-                                farm-to-table sartorial williamsburg marfa PBR leggings trust fund. Mcsweeney’s banh mi lo-fi mustache, fixie
-                                cosby
-                                sweater tumblr twee fanny pack. Thundercats food truck vegan, hoodie irony artisan beard synth.</p>
+                    <script type="text/javascript">
+                        new ClipboardJS('.copy-button');
+                    </script>
 
-                                <p><small><em>^ Hipster Ipsum</em>. Small text example.</small></p>
+                    <h3>Core Brand Colors</h3>
+                    <hr>
 
-                                <h3>Colored text - good for <a href="https://bulma.io/documentation/components/message/">UI messages and alerts</a>.
-                                </h3>
+                    <div class="columns">
+                        <div class="column is-one-quarter">
 
-                                <p class="has-text-primary">Text that has the <code>is-primary</code> class.</p>
-                                <p class="has-text-link">Text that has the <code>is-link</code> class.</p>
-                                <p class="has-text-info">Text that has the <code>is-info</code> class.</p>
-                                <p class="has-text-success">Text that has the <code>is-success</code> class.</p>
-                                <p class="has-text-warning">Text that has the <code>is-warning</code> class.</p>
-                                <p class="has-text-danger">Text that has the <code>is-danger</code> class.</p>
-                                <p class="has-text-black">Text that has the <code>is-black</code> class.</p>
-                                <p class="has-text-dark">Text that has the <code>is-dark</code> class.</p>
-                                <p class="has-text-light">Text that has the <code>is-light</code> class.</p>
-                                <p class="has-text-white">Text that has the <code>is-white</code> class.</p>
-
-                                <p>For different color usages (background shades, inverted (dark mode) classes, etc view the docs for the <a
-                                    href="https://bulma.io/documentation/helpers/color-helpers/">color helpers</a>.</p>
-
-                                    <h2>Panels &amp; Sections</h2>
-
-                                    <article class="message is-danger">
-                                        <div class="message-header">
-                                            <p>Warning</p>
-                                            <button class="delete" aria-label="delete"></button>
-                                        </div>
-                                        <div class="message-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis
-                                            placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum
-                                            <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et
-                                            sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et
-                                            sem
-                                            eget, facilisis sodales sem.
-                                        </div>
-                                    </article>
-
-                                    <h2>Buttons</h2>
-
-                                    <p>Buttons have many different states of interaction, and can have different styles depending on their role. By
-                                        default, Hippo buttons should be rounded and use the <code>is-normal</code> sizing.</p>
-
-                                        <p>
-                                            <button class="button is-rounded">Rounded</button>
-                                            <button class="button is-primary is-rounded">Rounded</button>
-                                            <button class="button is-link is-rounded">Rounded</button>
-                                            <button class="button is-info is-rounded">Rounded</button>
-                                            <button class="button is-success is-rounded">Rounded</button>
-                                            <button class="button is-danger is-rounded">Rounded</button>
-                                        </p>
-
-                                        <button class="button is-small">Small</button>
-                                        <button class="button">Default</button>
-                                        <button class="button is-normal">Normal</button>
-                                        <button class="button is-medium">Medium</button>
-                                        <button class="button is-large">Large</button>
-
-                                        <p>Squared buttons:</p>
-
-                                        <button class="button">Normal</button>
-                                        <button class="button is-primary">Normal</button>
-                                        <button class="button is-link">Normal</button>
-                                        <button class="button is-info">Normal</button>
-                                        <button class="button is-success">Normal</button>
-                                        <button class="button is-warning">Normal</button>
-                                        <button class="button is-danger">Normal</button>
-
-                                        <p>Grouped (inline) buttons:</p>
-
-                                        <div class="field is-grouped">
-                                            <p class="control">
-                                                <button class="button is-primary is-rounded">
-                                                    Save changes
-                                                </button>
-                                            </p>
-                                            <p class="control">
-                                                <button class="button is-danger is-outlined is-rounded">
-                                                    Cancel
-                                                </button>
-                                            </p>
-                                            <p class="control">
-                                                <button class="button is-danger is-rounded">
-                                                    Delete post
-                                                </button>
-                                            </p>
-                                        </div>
-
-                                        <p>Loading...</p>
-
-                                        <button class="button is-loading">Loading</button>
-                                        <button class="button is-primary is-loading">Loading</button>
-                                        <button class="button is-link is-loading">Loading</button>
-                                        <button class="button is-info is-loading">Loading</button>
-
-                                        <p>Disabled state:</p>
-
-                                        <button class="button" title="Disabled button" disabled>Disabled</button>
-                                        <button class="button is-primary" title="Disabled button" disabled>Disabled</button>
-                                        <button class="button is-link" title="Disabled button" disabled>Disabled</button>
-                                        <button class="button is-info" title="Disabled button" disabled>Disabled</button>
-                                        <button class="button is-success" title="Disabled button" disabled>Disabled</button>
-                                        <button class="button is-warning" title="Disabled button" disabled>Disabled</button>
-                                        <button class="button is-danger" title="Disabled button" disabled>Disabled</button>
-
-                                        <h2>Tables</h2>
-                                        <!-- temp content for testing styles -->
-                                        <div class="column">
-                                            <a class="button is-primary">
-                                                <span>Add New Data</span>
-                                            </a>
-                                            <table class="table is-bordered is-striped is-narrow is-fullwidth mt-4">
-                                                <thead>
-                                                    <tr>
-                                                        <th class=""><abbr title="Generic">Generic</abbr></th>
-                                                        <th class=""><abbr title="Table">Table</abbr></th>
-                                                        <th><abbr title="Styles">Styles</abbr></th>
-                                                        <th><abbr title="Test">Test</abbr></th>
-                                                        <th>Actions</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Admin</td>
-                                                        <td>Matt Fisher</td>
-                                                        <td>BC, Canada</td>
-                                                        <td>April 01, 2017</td>
-                                                        <td>
-                                                            <a class="button is-primary">
-                                                                <span>Edit</span>
-                                                            </a>
-                                                            <a class="button is-danger">
-                                                                <span>Delete</span>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Admin</td>
-                                                        <td>Carolyn Van Slyck</td>
-                                                        <td>Chicago, Illinois</td>
-                                                        <td>April 01, 2017</td>
-                                                        <td>
-                                                            <a class="button is-primary">
-                                                                <span>Edit</span>
-                                                            </a>
-                                                            <a class="button is-danger">
-                                                                <span>Delete</span>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Admin</td>
-                                                        <td>Ivan Towlson</td>
-                                                        <td>New Zealand</td>
-                                                        <td>April 01, 2017</td>
-                                                        <td>
-                                                            <a class="button is-primary">
-                                                                <span>Edit</span>
-                                                            </a>
-                                                            <a class="button is-danger">
-                                                                <span>Delete</span>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Admin</td>
-                                                        <td>Ronan Flynn-Curran</td>
-                                                        <td>Bay Area, California</td>
-                                                        <td>April 01, 2017</td>
-                                                        <td>
-                                                            <a class="button is-primary">
-                                                                <span>Edit</span>
-                                                            </a>
-                                                            <a class="button is-danger">
-                                                                <span>Delete</span>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-                                                <a class="pagination-previous">Previous</a>
-                                                <a class="pagination-next">Next page</a>
-                                                <ul class="pagination-list">
-                                                    <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
-                                                    <li><span class="pagination-ellipsis">…</span></li>
-                                                    <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
-                                                    <li>
-                                                        <a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a>
-                                                    </li>
-                                                    <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
-                                                    <li><span class="pagination-ellipsis">…</span></li>
-                                                    <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
-                                                </ul>
-                                            </nav>
-                                        </div>
-                                    </div>
-                                </article>
+                            <div class="card card-color seagreen is-narrow">
+                                <div class="card-image">
+                                    <figure class="image copy-button" style="background-color: #34E8BD;" data-clipboard-target="#seagreen-hex"></figure>
+                                </div>
+                                <div class="card-content">
+                                    <p class="title is-6 color-variable copy">
+                                        <em>$</em><span id="seagreen">seagreen</span>
+                                        <button class="button copy-button" data-clipboard-target="#seagreen">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-hex copy">
+                                        <em>#</em><span id="seagreen-hex">34E8BD</span>
+                                        <button class="button copy-button" data-clipboard-target="#seagreen-hex">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-rgb copy">
+                                        <em>rgb(</em><span id="seagreen-rgb">52, 232, 189</span><em>)</em>
+                                        <button class="button copy-button" data-clipboard-target="#seagreen-rgb">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                </div>
                             </div>
-                        </section>
+                        </div>
+
+                        <div class="column is-one-quarter">
+                            <div class="card card-color oxfordblue is-narrow">
+                                <div class="card-image">
+                                    <figure class="image copy-button" style="background-color: #0D203F;" data-clipboard-target="#oxfordblue-hex"></figure>
+                                </div>
+                                <div class="card-content">
+                                    <p class="title is-6 color-variable copy">
+                                        <em>$</em><span id="oxfordblue">oxfordblue</span>
+                                        <button class="button copy-button" data-clipboard-target="#oxfordblue">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-hex copy">
+                                        <em>#</em><span id="oxfordblue-hex">0D203F</span>
+                                        <button class="button copy-button" data-clipboard-target="#oxfordblue-hex">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-rgb copy">
+                                        <em>rgb(</em><span id="oxfordblue-rgb">13, 32, 63</span><em>)</em>
+                                        <button class="button copy-button" data-clipboard-target="#oxfordblue-rgb">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column is-half">
+                            <pre class="is-pulled-right">
+Color Reference:
+----------------
+<a href="https://github.com/fermyon/styleguide/blob/main/scss/fermyon-color.scss">Sass</a> $variable
+Hex #color value
+RGB (color) value</pre>
+
+                        </div>
                     </div>
-                </div>
 
-                <script>
-                    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-                    if (prefersDarkScheme.matches) {
-                        document.body.classList.add('dark-theme');
-                    } else {
-                        document.body.classList.remove('dark-theme');
-                    }
+                    <h3>Secondary Accent Colors</h3>
+                    <hr>
 
-                    // toggle light and dark mode
-                    const btn = document.querySelector(".dark-mode");
-                    const currentTheme = localStorage.getItem("theme");
+                    <div class="columns">
+                        <div class="column is-one-quarter">
+                            <div class="card card-color rust is-narrow">
+                                <div class="card-image">
+                                    <figure class="image copy-button" style="background-color: #EF946C;" data-clipboard-target="#rust-hex"></figure>
+                                </div>
+                                <div class="card-content">
+                                    <p class="title is-6 color-variable copy">
+                                        <em>$</em><span id="rust">rust</span>
+                                        <button class="button copy-button" data-clipboard-target="#rust">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-hex copy">
+                                        <em>#</em><span id="rust-hex">EF946C</span>
+                                        <button class="button copy-button" data-clipboard-target="#rust-hex">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-rgb copy">
+                                        <em>rgb(</em><span id="rust-rgb">239, 148, 108</span><em>)</em>
+                                        <button class="button copy-button" data-clipboard-target="#rust-rgb">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
 
-                    if (currentTheme == "dark") {
-                        document.body.classList.add("dark-theme");
-                    }
+                        <div class="column is-one-quarter">
+                            <div class="card card-color rust is-narrow">
+                                <div class="card-image">
+                                    <figure class="image copy-button" style="background-color: #BEA7E5;" data-clipboard-target="#lavender-hex"></figure>
+                                </div>
+                                <div class="card-content">
+                                    <p class="title is-6 color-variable copy">
+                                        <em>$</em><span id="lavender">lavender</span>
+                                        <button class="button copy-button" data-clipboard-target="#lavender">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-hex copy">
+                                        <em>#</em><span id="lavender-hex">BEA7E5</span>
+                                        <button class="button copy-button" data-clipboard-target="#lavender-hex">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-rgb copy">
+                                        <em>rgb(</em><span id="lavender-rgb">190, 167, 229</span><em>)</em>
+                                        <button class="button copy-button" data-clipboard-target="#lavender-rgb">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
 
-                    btn.addEventListener("click", function() {
-                        document.body.classList.toggle("dark-theme");
+                        <div class="column is-one-quarter">
+                            <div class="card card-color rust is-narrow">
+                                <div class="card-image">
+                                    <figure class="image copy-button" style="background-color: #0E8FDD;"></figure>
+                                </div>
+                                <div class="card-content">
+                                    <p class="title is-6 color-variable copy">
+                                        <em>$</em><span id="colablue">colablue</span>
+                                        <button class="button copy-button" data-clipboard-target="#colablue">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-hex copy">
+                                        <em>#</em><span id="colablue-hex">0E8FDD</span>
+                                        <button class="button copy-button" data-clipboard-target="#colablue-hex">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-rgb copy">
+                                        <em>rgb(</em><span id="colablue-rgb">14, 143, 221</span><em>)</em>
+                                        <button class="button copy-button" data-clipboard-target="#colablue-rgb">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                        let theme = "light";
-                        if (document.body.classList.contains("dark-theme")) {
-                            theme = "dark";
-                        }
-                        // save theme to localstorage
-                        localStorage.setItem("theme", theme);
-                    });
-                </script>
+                    <h3>Complimentary Tones <small>(for shading)</small></h3>
+                    <hr>
 
-            </body>
-            </html>
+                    <div class="columns">
+
+                        <div class="column is-one-quarter">
+                            <div class="card card-color rust is-narrow">
+                                <div class="card-image">
+                                    <figure class="image copy-button" style="background-color: #213762;" data-clipboard-target="#darkspace-hex"></figure>
+                                </div>
+                                <div class="card-content">
+                                    <p class="title is-6 color-variable copy">
+                                        <em>$</em><span id="darkspace">darkspace</span>
+                                        <button class="button copy-button" data-clipboard-target="#darkspace">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-hex copy">
+                                        <em>#</em><span id="darkspace-hex">213762</span>
+                                        <button class="button copy-button" data-clipboard-target="#darkspace-hex">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-rgb copy">
+                                        <em>rgb(</em><span id="darkspace-rgb">33, 55, 98</span><em>)</em>
+                                        <button class="button copy-button" data-clipboard-target="#darkspace-rgb">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="column is-one-quarter">
+                            <div class="card card-color rust is-narrow">
+                                <div class="card-image">
+                                    <figure class="image copy-button" style="background-color: #0A455A;" data-clipboard-target="#darkocean-hex"></figure>
+                                </div>
+                                <div class="card-content">
+                                    <p class="title is-6 color-variable copy">
+                                        <em>$</em><span id="darkocean">darkocean</span>
+                                        <button class="button copy-button" data-clipboard-target="#darkocean">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-hex copy">
+                                        <em>#</em><span id="darkocean-hex">0A455A</span>
+                                        <button class="button copy-button" data-clipboard-target="#darkocean-hex">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-rgb copy">
+                                        <em>rgb(</em><span id="darkocean-rgb">10, 69, 90</span><em>)</em>
+                                        <button class="button copy-button" data-clipboard-target="#darkocean-rgb">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column is-one-quarter">
+                            <div class="card card-color rust is-narrow">
+                                <div class="card-image">
+                                    <figure class="image copy-button" style="background-color: #1F7A8C;" data-clipboard-target="#darkolive-hex"></figure>
+                                </div>
+                                <div class="card-content">
+                                    <p class="title is-6 color-variable copy">
+                                        <em>$</em><span id="darkolive">darkolive</span>
+                                        <button class="button copy-button" data-clipboard-target="#darkolive">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-hex copy">
+                                        <em>#</em><span id="darkolive-hex">1F7A8C</span>
+                                        <button class="button copy-button" data-clipboard-target="#darkolive-hex">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-rgb copy">
+                                        <em>rgb(</em><span id="darkolive-rgb">31, 122, 140</span><em>)</em>
+                                        <button class="button copy-button" data-clipboard-target="#darkolive-rgb">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column is-one-quarter">
+                            <div class="card card-color rust is-narrow">
+                                <div class="card-image">
+                                    <figure class="image copy-button" style="background-color: #525776;" data-clipboard-target="#darkplum-hex"></figure>
+                                </div>
+                                <div class="card-content">
+                                    <p class="title is-6 color-variable copy">
+                                        <em>$</em><span id="darkplum">darkplum</span>
+                                        <button class="button copy-button" data-clipboard-target="#darkplum">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-hex copy">
+                                        <em>#</em><span id="darkplum-hex">525776</span>
+                                        <button class="button copy-button" data-clipboard-target="#darkplum-hex">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-rgb copy">
+                                        <em>rgb(</em><span id="darkplum-rgb">82, 87, 118</span><em>)</em>
+                                        <button class="button copy-button" data-clipboard-target="#darkplum-rgb">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="columns">
+
+                        <div class="column is-one-quarter">
+                            <div class="card card-color rust is-narrow">
+                                <div class="card-image">
+                                    <figure class="image copy-button" style="background-color: #1FBCA0;" data-clipboard-target="#midgreen-hex"></figure>
+                                </div>
+                                <div class="card-content">
+                                    <p class="title is-6 color-variable copy">
+                                        <em>$</em><span id="midgreen">midgreen</span>
+                                        <button class="button copy-button" data-clipboard-target="#midgreen">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-hex copy">
+                                        <em>#</em><span id="midgreen-hex">1FBCA0</span>
+                                        <button class="button copy-button" data-clipboard-target="#midgreen-hex">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-rgb copy">
+                                        <em>rgb(</em><span id="midgreen-rgb">31, 188, 160</span><em>)</em>
+                                        <button class="button copy-button" data-clipboard-target="#midgreen-rgb">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column is-one-quarter">
+                            <div class="card card-color rust is-narrow">
+                                <div class="card-image">
+                                    <figure class="image copy-button" style="background-color: #345995;" data-clipboard-target="#midblue-hex"></figure>
+                                </div>
+                                <div class="card-content">
+                                    <p class="title is-6 color-variable copy">
+                                        <em>$</em><span id="midblue">midblue</span>
+                                        <button class="button copy-button" data-clipboard-target="#midblue">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-hex copy">
+                                        <em>#</em><span id="midblue-hex">345995</span>
+                                        <button class="button copy-button" data-clipboard-target="#midblue-hex">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-rgb copy">
+                                        <em>rgb(</em><span id="midblue-rgb">31, 188, 160</span><em>)</em>
+                                        <button class="button copy-button" data-clipboard-target="#midblue-rgb">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="columns">
+
+                        <div class="column is-one-quarter">
+                            <div class="card card-color rust is-narrow">
+                                <div class="card-image">
+                                    <figure class="image copy-button" style="background-color: #D3C3D9;" data-clipboard-target="#lightplum-hex"></figure>
+                                </div>
+                                <div class="card-content">
+                                    <p class="title is-6 color-variable copy">
+                                        <em>$</em><span id="lightplum">lightplum</span>
+                                        <button class="button copy-button" data-clipboard-target="#lightplum">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-hex copy">
+                                        <em>#</em><span id="lightplum-hex">D3C3D9</span>
+                                        <button class="button copy-button" data-clipboard-target="#lightplum-hex">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-rgb copy">
+                                        <em>rgb(</em><span id="lightplum-rgb">211, 195, 217</span><em>)</em>
+                                        <button class="button copy-button" data-clipboard-target="#lightplum-rgb">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="column is-one-quarter">
+                            <div class="card card-color rust is-narrow">
+                                <div class="card-image">
+                                    <figure class="image copy-button" style="background-color: #D9DBE8;" data-clipboard-target="#lightgrey-hex"></figure>
+                                </div>
+                                <div class="card-content">
+                                    <p class="title is-6 color-variable copy">
+                                        <em>$</em><span id="lightgrey">lightgrey</span>
+                                        <button class="button copy-button" data-clipboard-target="#lightgrey">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-hex copy">
+                                        <em>#</em><span id="lightgrey-hex">D9DBE8</span>
+                                        <button class="button copy-button" data-clipboard-target="#lightgrey-hex">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-rgb copy">
+                                        <em>rgb(</em><span id="lightgrey-rgb">217, 219, 232</span><em>)</em>
+                                        <button class="button copy-button" data-clipboard-target="#lightgrey-rgb">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column is-one-quarter">
+                            <div class="card card-color rust is-narrow">
+                                <div class="card-image">
+                                    <figure class="image copy-button" style="background-color: #ECE5EE;" data-clipboard-target="#lightlavender-hex"></figure>
+                                </div>
+                                <div class="card-content">
+                                    <p class="title is-6 color-variable copy">
+                                        <em>$</em><span id="lightlavender">lightlavender</span>
+                                        <button class="button copy-button" data-clipboard-target="#lightlavender">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-hex copy">
+                                        <em>#</em><span id="lightlavender-hex">ECE5EE</span>
+                                        <button class="button copy-button" data-clipboard-target="#lightlavender-hex">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-rgb copy">
+                                        <em>rgb(</em><span id="lightlavender-rgb">236, 229, 238</span><em>)</em>
+                                        <button class="button copy-button" data-clipboard-target="#lightlavender-rgb">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column is-one-quarter">
+                            <div class="card card-color rust is-narrow">
+                                <div class="card-image">
+                                    <figure class="image copy-button" style="background-color: #F9F7EE;" data-clipboard-target="#lightlemon-hex"></figure>
+                                </div>
+                                <div class="card-content">
+                                    <p class="title is-6 color-variable copy">
+                                        <em>$</em><span id="lightlemon">lightlemon</span>
+                                        <button class="button copy-button" data-clipboard-target="#lightlemon">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-hex copy">
+                                        <em>#</em><span id="lightlemon-hex">F9F7EE</span>
+                                        <button class="button copy-button" data-clipboard-target="#lightlemon-hex">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                    <p class="subtitle is-6 color-rgb copy">
+                                        <em>rgb(</em><span id="lightlemon-rgb">249, 247, 238</span><em>)</em>
+                                        <button class="button copy-button" data-clipboard-target="#lightlemon-rgb">
+                                            <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>This is the baseline brand palette, which should be referred to when creating new designs for Fermyon</p>
+                </section>
+                
+                <section id="type">
+                    <h1>Typography</h1>
+
+                    <p>Austin deep v wayfarers, retro readymade quinoa af seitan meggings banjo. Deep v pitchfork 3 wolf moon, everyday carry prism chicharrones truffaut knausgaard succulents chartreuse photo booth church-key. Prism cred farm-to-table scenester cold-pressed cliche mlkshk banh mi umami chillwave vegan. PBR&B iPhone adaptogen irony tattooed kickstarter pork belly jianbing fashion axe forage normcore celiac blue bottle. Echo park bushwick cliche, selfies lo-fi hexagon four loko mumblecore mustache. 3 wolf moon brooklyn mlkshk chambray cornhole slow-carb tbh, artisan affogato drinking vinegar photo booth portland raw denim tofu poke.
+
+                    <p>Normcore vaporware microdosing gochujang craft beer la croix chartreuse unicorn asymmetrical. Bitters kitsch banjo banh mi, unicorn before they sold out sartorial small batch authentic echo park artisan pinterest copper mug raw denim. Shoreditch stumptown vexillologist meditation salvia everyday carry actually +1. Photo booth 3 wolf moon mumblecore chartreuse leggings lo-fi master cleanse actually food truck before they sold out shabby chic. Banjo offal pinterest salvia kale chips.</p>
+                </section>
+                
+                <section id="logo">
+                    <h1>Logo</h1>
+
+                    <p>Austin deep v wayfarers, retro readymade quinoa af seitan meggings banjo. Deep v pitchfork 3 wolf moon, everyday carry prism chicharrones truffaut knausgaard succulents chartreuse photo booth church-key. Prism cred farm-to-table scenester cold-pressed cliche mlkshk banh mi umami chillwave vegan. PBR&B iPhone adaptogen irony tattooed kickstarter pork belly jianbing fashion axe forage normcore celiac blue bottle. Echo park bushwick cliche, selfies lo-fi hexagon four loko mumblecore mustache. 3 wolf moon brooklyn mlkshk chambray cornhole slow-carb tbh, artisan affogato drinking vinegar photo booth portland raw denim tofu poke.
+
+                    <p>Normcore vaporware microdosing gochujang craft beer la croix chartreuse unicorn asymmetrical. Bitters kitsch banjo banh mi, unicorn before they sold out sartorial small batch authentic echo park artisan pinterest copper mug raw denim. Shoreditch stumptown vexillologist meditation salvia everyday carry actually +1. Photo booth 3 wolf moon mumblecore chartreuse leggings lo-fi master cleanse actually food truck before they sold out shabby chic. Banjo offal pinterest salvia kale chips.</p>
+                </section>
+
+                <section id="layout">
+                    <h1>Layout</h1>
+
+                    <p>Austin deep v wayfarers, retro readymade quinoa af seitan meggings banjo. Deep v pitchfork 3 wolf moon, everyday carry prism chicharrones truffaut knausgaard succulents chartreuse photo booth church-key. Prism cred farm-to-table scenester cold-pressed cliche mlkshk banh mi umami chillwave vegan. PBR&B iPhone adaptogen irony tattooed kickstarter pork belly jianbing fashion axe forage normcore celiac blue bottle. Echo park bushwick cliche, selfies lo-fi hexagon four loko mumblecore mustache. 3 wolf moon brooklyn mlkshk chambray cornhole slow-carb tbh, artisan affogato drinking vinegar photo booth portland raw denim tofu poke.
+                        
+                    <blockquote>
+                        <p>Also worth looking at many useful Bulma <a href="https://bulmatemplates.github.io/bulma-templates/">layout templates available here</a>.</p>
+                    </blockquote>
+                </section>
+
+                <section id="ui">
+                    <h1>User Interface Styles</h1>
+
+                    <h3>Examples</h3>
+
+                    <p>Examples of how different <strong>headings</strong> and <strong>text styles</strong> will look.</p>
+
+                    <h1>H1 Heading One</h1>
+                    <h2>H2 Heading Two</h2>
+                    <h3>H3 Heading Three</h3>
+                    <h4>H4 Heading Four</h4>
+                    <h5>H5 Heading Five</h5>
+
+                    <p>For additional sizing options, see the <a href="https://bulma.io/documentation/helpers/typography-helpers/">bulma docs here</a>.</p>
+
+                    <p>Cosby sweater iphone artisan, squid trust fund photo booth twee blog shoreditch single-origin coffee aesthetic jean shorts messenger bag brooklyn butcher. Iphone fap banksy next level put a bird on it, letterpress photo thundercats biodiesel fanny pack etsy banh mi wayfarers. Sustainable four loko dreamcatcher, vegan single-origin coffee yr cardigan biodiesel williamsburg thundercats salvia master cleanse terry richardson tumblr mcsweeney’s. Lomo gluten-free salvia you probably haven’t heard of them portland. Mlkshk jean shorts carles, etsy artisan farm-to-table sartorial williamsburg marfa PBR leggings trust fund. Mcsweeney’s banh mi lo-fi mustache, fixie cosby sweater tumblr twee fanny pack. Thundercats food truck vegan, hoodie irony artisan beard synth.</p>
+                    
+                    <p><small><em>^ Hipster Ipsum</em>. Small text example.</small></p>
+
+                    <h3>Colored text - good for <a href="https://bulma.io/documentation/components/message/">UI messages and alerts</a>.</h3>
+
+                    <p class="has-text-primary">Text that has the <code>is-primary</code> class.</p>
+                    <p class="has-text-link">Text that has the <code>is-link</code> class.</p>
+                    <p class="has-text-info">Text that has the <code>is-info</code> class.</p>
+                    <p class="has-text-success">Text that has the <code>is-success</code> class.</p>
+                    <p class="has-text-warning">Text that has the <code>is-warning</code> class.</p>
+                    <p class="has-text-danger">Text that has the <code>is-danger</code> class.</p>
+                    <p class="has-text-black">Text that has the <code>is-black</code> class.</p>
+                    <p class="has-text-dark">Text that has the <code>is-dark</code> class.</p>
+                    <p class="has-text-light">Text that has the <code>is-light</code> class.</p>
+                    <p class="has-text-white">Text that has the <code>is-white</code> class.</p>
+
+                    <p>For different color usages (background shades, inverted (dark mode) classes, etc view the docs for the <a href="https://bulma.io/documentation/helpers/color-helpers/">color helpers</a>.</p>
+                    
+                    <h2>Panels &amp; Sections</h2>
+
+                    <article class="message is-danger">
+                        <div class="message-header">
+                            <p>Warning</p>
+                            <button class="delete" aria-label="delete"></button>
+                        </div>
+                        <div class="message-body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis
+                            placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum
+                            <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et
+                            sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et
+                            sem
+                            eget, facilisis sodales sem.
+                        </div>
+                    </article>
+
+                    <h2>Buttons</h2>
+
+                    <p>Buttons have many different states of interaction, and can have different styles depending on their role. By default, Hippo buttons should be rounded and use the <code>is-normal</code> sizing.</p>
+                    
+                    <p>
+                        <button class="button is-rounded">Rounded</button>
+                        <button class="button is-primary is-rounded">Rounded</button>
+                        <button class="button is-link is-rounded">Rounded</button>
+                        <button class="button is-info is-rounded">Rounded</button>
+                        <button class="button is-success is-rounded">Rounded</button>
+                        <button class="button is-danger is-rounded">Rounded</button>
+                    </p>
+
+                    <p>
+                        <button class="button is-small">Small</button>
+                        <button class="button">Default</button>
+                        <button class="button is-normal">Normal</button>
+                        <button class="button is-medium">Medium</button>
+                        <button class="button is-large">Large</button>
+                    </p>
+
+                    <p>Squared buttons:</p>
+
+                    <p>
+                        <button class="button">Normal</button>
+                        <button class="button is-primary">Normal</button>
+                        <button class="button is-link">Normal</button>
+                        <button class="button is-info">Normal</button>
+                        <button class="button is-success">Normal</button>
+                        <button class="button is-warning">Normal</button>
+                        <button class="button is-danger">Normal</button>
+                    </p>
+
+                    <p>Grouped (inline) buttons:</p>
+
+                    <div class="field is-grouped">
+                        <p class="control">
+                            <button class="button is-primary is-rounded">
+                                Save changes
+                            </button>
+                        </p>
+                        <p class="control">
+                            <button class="button is-danger is-outlined is-rounded">
+                                Cancel
+                            </button>
+                        </p>
+                        <p class="control">
+                            <button class="button is-danger is-rounded">
+                                Delete post
+                            </button>
+                        </p>
+                    </div>
+
+                    <p>Loading...</p>
+
+                    <button class="button is-loading">Loading</button>
+                    <button class="button is-primary is-loading">Loading</button>
+                    <button class="button is-link is-loading">Loading</button>
+                    <button class="button is-info is-loading">Loading</button>
+
+                    <p>Disabled state:</p>
+
+                    <button class="button" title="Disabled button" disabled>Disabled</button>
+                    <button class="button is-primary" title="Disabled button" disabled>Disabled</button>
+                    <button class="button is-link" title="Disabled button" disabled>Disabled</button>
+                    <button class="button is-info" title="Disabled button" disabled>Disabled</button>
+                    <button class="button is-success" title="Disabled button" disabled>Disabled</button>
+                    <button class="button is-warning" title="Disabled button" disabled>Disabled</button>
+                    <button class="button is-danger" title="Disabled button" disabled>Disabled</button>
+
+                    <h2>Tables</h2>
+                        
+                    <div class="column">
+                        <a class="button is-primary">
+                            <span>Add New Data</span>
+                        </a>
+
+                        <table class="table is-bordered is-striped is-narrow is-fullwidth mt-4">
+                            <thead>
+                                <tr>
+                                    <th class=""><abbr title="Generic">Generic</abbr></th>
+                                    <th class=""><abbr title="Table">Table</abbr></th>
+                                    <th><abbr title="Styles">Styles</abbr></th>
+                                    <th><abbr title="Test">Test</abbr></th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Admin</td>
+                                    <td>Matt Fisher</td>
+                                    <td>BC, Canada</td>
+                                    <td>April 01, 2017</td>
+                                    <td>
+                                        <a class="button is-primary">
+                                            <span>Edit</span>
+                                        </a>
+                                        <a class="button is-danger">
+                                            <span>Delete</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Admin</td>
+                                    <td>Carolyn Van Slyck</td>
+                                    <td>Chicago, Illinois</td>
+                                    <td>April 01, 2017</td>
+                                    <td>
+                                        <a class="button is-primary">
+                                            <span>Edit</span>
+                                        </a>
+                                        <a class="button is-danger">
+                                            <span>Delete</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Admin</td>
+                                    <td>Ivan Towlson</td>
+                                    <td>New Zealand</td>
+                                    <td>April 01, 2017</td>
+                                    <td>
+                                        <a class="button is-primary">
+                                            <span>Edit</span>
+                                        </a>
+                                        <a class="button is-danger">
+                                            <span>Delete</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Admin</td>
+                                    <td>Ronan Flynn-Curran</td>
+                                    <td>Bay Area, California</td>
+                                    <td>April 01, 2017</td>
+                                    <td>
+                                        <a class="button is-primary">
+                                            <span>Edit</span>
+                                        </a>
+                                        <a class="button is-danger">
+                                            <span>Delete</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+                            <a class="pagination-previous">Previous</a>
+                            <a class="pagination-next">Next page</a>
+                            <ul class="pagination-list">
+                                <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+                                <li><span class="pagination-ellipsis">…</span></li>
+                                <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
+                                <li>
+                                    <a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a>
+                                </li>
+                                <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+                                <li><span class="pagination-ellipsis">…</span></li>
+                                <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </section>
+
+                <section id="docs">
+                    <h1>Documentation Styles</h1>
+                </section>
+
+                <section id="slides">
+                    <h1>Slides &amp; Document Templates</h1>
+
+                    <p>File templates are a great starting point for making company documents and presentation decks.</p>
+                    <br>
+                    
+                    <div class="card column is-one-third">
+                        <div class="card-image">
+                            <a href="https://fermyontech-my.sharepoint.com/:p:/g/personal/ronan_fermyon_com/EQ5CHgYnNLJBqzyx2qu0a8kBxKTOY-ApVkvnCYyf1wmBsg?e=U1eBPC"><img src="https://user-images.githubusercontent.com/686194/157764095-c7cd36de-5a57-494d-a662-6131d7f67876.jpg" alt="Powerpoint Template" /></a>
+                        </div>
+                        <div class="card-content">
+                          <div class="media">
+                            <div class="media-content">
+                              <p class="title is-5"><a href="https://fermyontech-my.sharepoint.com/:p:/g/personal/ronan_fermyon_com/EQ5CHgYnNLJBqzyx2qu0a8kBxKTOY-ApVkvnCYyf1wmBsg?e=U1eBPC">PowerPoint</a></p>
+                              <p class="is-size-6">.ppt</p>
+                            </div>
+                          </div>
+                      
+                          <div class="content is-size-6">
+                            A presenation template with editable title "splash" pages and a mixture of light and dark text slides.
+                          </div>
+                        </div>
+                      </div>
+
+
+                </section>
+
+                <section id="developer">
+                    <h1>Developer Guide</h1>
+
+                    <h3>Working on the Styleguide</h3>
+
+                    <h3>Built with Bulma</h3>
+
+                    <h3>Where's the JavaScript?</h3>
+                </section>
+
+                <section id="resources">
+                    <h1>External Resources</h1>
+
+                    <h3>Accessibility</h3>
+
+                    <p>Most of the web is text. Good 'ol plain text. The most important part of any design is to communicate the content of the medium clearly and effectively &mdash; the design should never get in the way of legibility.</p>
+
+                    <p>Color contrast is an important component of this. All of our <a href="#color">brand colors</a> are tested to ensure AAA-compliant scores in terms of color contrast, to ensure legibility is always maintained, whether the content is presented on a light or dark background. </p>
+
+                    <blockquote>
+                        <p>
+                            Color contrast checker <a href="https://coolors.co/contrast-checker/0d203f-f7f4f8">tools like this one</a> are important for evaluating foreground/background pairings.
+                        </p>
+                    </blockquote>
+
+                    <p>The W3C's guidelines on <a href="https://www.w3.org/WAI/">Web Accessibility</a> form the underlying spec for constructing any pages for the web. We aim to adhere to AA standards as a base and ideally AAA standards in the presentation of our content.</p>
+                    
+
+                    <ul>
+                        <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines</a></li>
+                        <li><a href="http://lamb.cc/typograph/">Measuring Typographic Scale &amp; Rythm</a></li>
+                    </ul>
+
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <script>
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        if (prefersDarkScheme.matches) {
+        document.body.classList.add('dark-theme');
+        } else {
+        document.body.classList.remove('dark-theme');
+        }
+
+        // toggle light and dark mode
+        const btn = document.querySelector(".dark-mode");
+        const currentTheme = localStorage.getItem("theme");
+
+        if (currentTheme == "dark") {
+        document.body.classList.add("dark-theme");
+        }
+
+        btn.addEventListener("click", function() {
+        document.body.classList.toggle("dark-theme");
+        
+        let theme = "light";
+        if (document.body.classList.contains("dark-theme")) {
+            theme = "dark";
+        }
+        // save theme to localstorage
+        localStorage.setItem("theme", theme);
+        });
+    </script>
+
+</body>
+</html>
