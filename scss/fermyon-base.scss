@@ -525,6 +525,12 @@ body.dark-theme {
         }
     }
 
+    .menu-wrap {
+        &:hover {
+            outline: 2px solid darken($lavender, 55%);
+        }
+    }
+
     aside.menu {
         left: 5vw;
 
