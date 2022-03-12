@@ -557,6 +557,45 @@ body.dark-theme {
         }
     }
 
+    .content {
+        .box {
+            background-color: $darkspace;
+            color: white;
+        }
+        
+        h1, h2, h3, h4, h5, p, li, th, td, dd  {
+            code {
+                background-color: $darkspace;
+                color: $lightlavender;
+            }
+        }
+
+        section {
+            table {
+                background-color: $darkspace;
+            }
+        }
+
+        blockquote {
+            background-color: transparent;
+
+            p {
+                background-color: lighten($darkspace, 2.5%);
+                border-color: lighten($darkspace, 7.5%);
+                color: white;
+            }
+        }
+
+        blockquote > blockquote p,
+        aside p {
+            background-color: lighten($darkspace, 2.5%);
+            border-color: lighten($darkspace, 7.5%);
+            color: white;
+        }
+    }
+
+    
+
     footer {
         background: $oxfordblue;
         border-color: $darkocean;
