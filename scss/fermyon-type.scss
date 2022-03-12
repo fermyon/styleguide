@@ -50,7 +50,7 @@ article {
     }
 
     strong {
-        color: $lightlavender;
+        color: $oxfordblue;
     }
 
     a {
@@ -263,6 +263,10 @@ body.dark-theme {
     article {
         a {
             color: $seagreen;
+        }
+
+        strong {
+            color: $lightlavender;
         }
     }
 }

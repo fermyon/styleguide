@@ -163,11 +163,15 @@ main {
 }
 #topbar.navbar .logo-project {
   font-weight: bold;
-  margin: 1.75rem 0 0 1.25rem;
-  font-size: 1.05rem;
+  margin: 2rem 0 0 1.3335rem;
+  font-size: 1.125rem;
 }
 #topbar.navbar .logo-project a {
-  color: #0D203F;
+  color: #213762;
+}
+#topbar.navbar .logo-project .tag {
+  margin: -0.5rem 0 0 0.67rem;
+  position: relative;
 }
 #topbar.navbar a.navbar-item {
   line-height: 3;
@@ -255,7 +259,7 @@ aside.menu a.button:hover {
 @media screen and (min-width: 1024px) {
   aside.menu.is-fixed-desktop {
     position: fixed;
-    left: 5vw;
+    left: 5.5vw;
     top: 12rem;
   }
 }
@@ -270,7 +274,7 @@ aside.menu a.button:hover {
 @media screen and (min-width: 1024px) {
   aside.menu.is-sticky {
     position: sticky;
-    left: 5vw;
+    left: 5.5vw;
     top: 0;
     bottom: 0;
     display: inline-block;
@@ -391,6 +395,12 @@ body.dark-theme #topbar.navbar {
 body.dark-theme #topbar.navbar .logo svg, body.dark-theme #topbar.navbar .logo path {
   fill: white !important;
 }
+body.dark-theme #topbar.navbar .logo-project a {
+  color: #34E8BD;
+}
+body.dark-theme #topbar.navbar .logo-project a .tag {
+  background-color: #213762;
+}
 body.dark-theme #topbar.navbar .navbar-menu a {
   color: #34E8BD;
 }
@@ -421,11 +431,11 @@ body.dark-theme pre {
 body.dark-theme .card {
   background: linear-gradient(0, #112b54, #0D203F 100%);
   box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.5), 0 0 0 1px rgba(10, 10, 10, 0.52);
-  outline: 1px solid rgba(255, 255, 255, 0.1);
+  outline: 1px solid rgba(255, 255, 255, 0.2);
   color: white;
 }
 body.dark-theme .card figure.image {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.333);
 }
 body.dark-theme .card p {
   color: white;
@@ -493,7 +503,7 @@ article aside p {
   margin: 0 !important;
 }
 article strong {
-  color: #ECE5EE;
+  color: #0D203F;
 }
 article a {
   color: #0a68a1;
@@ -712,5 +722,9 @@ body.dark-theme h1, body.dark-theme h2, body.dark-theme h3, body.dark-theme h4, 
 body.dark-theme .content a,
 body.dark-theme article a {
   color: #34E8BD;
+}
+body.dark-theme .content strong,
+body.dark-theme article strong {
+  color: #ECE5EE;
 }
 /*# sourceMappingURL=fermyon.css.map */
