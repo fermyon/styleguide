@@ -8,7 +8,7 @@ body {
     color: $oxfordblue;
 }
 
-article {
+.content {
 
     h1, h2, h3 {
         font-weight: bold;
@@ -19,6 +19,22 @@ article {
         margin: 1.67rem 0;
         font-size: 1rem;
         max-width: 800px;
+    }
+
+    &.size-16 {
+        ul, ol, dl, p, blockquote {
+            font-size: 1rem;
+        }
+    }
+    &.size-18{
+        ul, ol, dl, p, blockquote {
+            font-size: 1.125rem;
+        }
+    }
+    &.size-20 {
+        ul, ol, dl, p, blockquote {
+            font-size: 1.25rem;
+        }
     }
 
     ul li {
@@ -36,16 +52,41 @@ article {
         padding-left: 0.5rem;
     }
 
-    blockquote,
+    blockquote > blockquote,
     aside {
-        font-size: 1rem;
-        padding: 1.67rem 7.5% 1.67rem 1.5rem !important;
-        margin: 1.5em auto 2.5rem !important;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
 
         p {
-            font-size: 1rem !important;
-            line-height: 1.825;
-            margin: 0 !important;
+            line-height: 1.8;
+            border: 1px solid $lightgray;
+            font-size: 1.2rem;
+            background: $lightlemon;
+            padding: 1.25rem 1.5rem !important;
+            margin: 2.5em auto 5rem !important;
+            text-align: left;
+            border-radius: .667rem;
+            box-shadow: 0 3px 6px rgba(30,30,30,.125);
+            color: $oxfordblue;
+        }
+    }
+
+    blockquote {
+        padding: 0rem 0 !important;
+        margin: 0 !important;
+        border-left: none;
+
+        p {
+            color: darken($darkolive, 25%);
+            color: $darkblue;
+            font-size: 1.1rem !important;
+            line-height: 2;
+            padding-right: 0 !important;
+            border-left: 4px solid $lightgray;
+            background: lighten($lightlavender, 3.5%);
+            padding: 0.65rem 5% 0.65rem 2rem !important;
+            margin: 1rem auto 1rem !important;
+            text-align: left;
         }
     }
 
@@ -186,7 +227,7 @@ article {
         }
 
         &.card-color {
-            border-radius: 0.75rem;
+            border-radius: 0.33rem;
             overflow: hidden;
 
             figure.image {
@@ -211,7 +252,16 @@ article {
 
     /* Code Styling */
 
-    p {
+    h1,
+    h2,
+    h3, 
+    h4,
+    h5,
+    p,
+    li,
+    td,
+    th,
+    dd {
         code {
             border-radius: 0.33rem !important;
             background: darken($lightlavender, 1.25%);
@@ -228,6 +278,7 @@ article {
         color: white;
         font-size: 0.925rem;
         color: $lavender;
+        font-family: $mono;
 
         a {
             color: $colablue;
@@ -240,6 +291,12 @@ article {
                 color: $seagreen;
             } 
         }
+    }
+
+    pre {
+        margin: 1.333rem 0;
+        max-width: 100%;
+        position: relative;
     }
 
     code {

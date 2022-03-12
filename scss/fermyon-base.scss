@@ -17,7 +17,7 @@ body {
 }
 
 main {
-    padding: 8.75rem 0 0;
+    padding: 5.75rem 0 0;
     min-height: 100vh;
     margin-bottom: -12rem;
     z-index: 100;
@@ -40,10 +40,15 @@ main {
         height: 5.25rem;
     }
 
+    &.is-wide {
+        padding-left: 2.5vw;
+        padding-right: 2.5vw;
+    }
+
     .dark-mode {
         position: absolute;
         right: 0;
-        top: 1.636rem;
+        top: 2rem;
         display: inline-block;
         width: 1.5rem;
         line-height: 1.5;
@@ -220,7 +225,14 @@ main {
 }
 
 .menu-wrap {
-    padding: 0 5vw;
+    padding: 0 2.5vw;
+    width: 17rem;
+    outline: 2px solid transparent;
+    @include transition;
+
+    &:hover {
+        outline: 2px solid $lightlavender;
+    }
 }
 
 aside.menu {
@@ -244,21 +256,34 @@ aside.menu {
         @include border-radius(2rem,2rem);
 
         &:hover {
-            background-color: $seagreen;
-            color: white;
+            background-color: $lightlavender;
+            color: $darkspace;
         }
 
         &.button {
-            line-height: 2.333;
-            margin-top: 1.5rem;
-            padding: 0 1.25vw;
+            line-height: 2.25;
+            margin-top: 1.25rem;
+            padding: 0 1.333vw;
             font-size: 1.125rem;
             background: transparent;
             border: 2px solid $seagreen;
 
+            svg {
+                margin-right: 0.25rem;
+                margin-bottom: -1px;
+            }
+
+            svg, path {
+                @include transition;
+            }
+
             &:hover {
                 background-color: $seagreen;
                 color: white;
+
+                svg, path {
+                    fill: white;
+                }
             }
         }
     }
@@ -281,14 +306,13 @@ aside.menu {
     &.is-sticky {
         @media screen and (min-width: 1024px) {
             position: sticky;
-            left: 5.5vw;
-            top: 0;
+            left: 2.5vw;
+            top: 5.75rem;
             bottom: 0;
             display: inline-block;
             vertical-align: top;
             max-height: 100vh;
             overflow-y: auto;
-            // border: 1px solid red;
         }
     }
 }
@@ -328,6 +352,51 @@ hr.page-break {
     margin-left: auto;
     margin-right: auto;
     max-width: 48.5rem;
+
+    .box {
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        padding: 1.67rem 2rem;
+    }
+
+    table {
+        background-color: white;
+        min-width: 100%;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+        border-collapse: collapse;
+        border-radius: 0.333em;
+        overflow: hidden;
+        box-shadow: 0 3px 6px rgba(30,30,30,.125);
+
+        th, td {
+            padding: 0.67vw 2vw;
+            border-bottom: 1px solid $lavender;
+            line-height: 1.5;
+        }
+
+        th {
+            font-size: 1.125rem;
+            font-weight: bold;
+            color: $oxfordblue;
+            background-color: $lightlemon;
+            line-height: 1.75;
+            border-bottom: 1px solid $lavender;
+        }
+
+        td {
+            font-size: 1rem;
+            border-bottom-color: $lightlavender;
+        }
+
+        tr {
+            &:last-of-type {
+                td {
+                    border: none;
+                }
+            }
+        }
+    }
 }
 
 

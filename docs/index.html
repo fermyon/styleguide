@@ -38,7 +38,7 @@
 
     <style type="text/css">
         article section {
-            padding-top: 3.5rem;
+            padding-top: 7.5rem;
             padding-bottom: 7.5rem;
         }
         article p {
@@ -50,7 +50,7 @@
             margin: 0;
             border: 5px solid transparent;
             transition: all ease 0.3s;
-            border-radius: 1rem 1rem 0 0;
+            border-radius: 0.33rem 0.33rem 0 0;
         }
         #color .card figure.image:hover {
             border-color: rgba(255,255,255,0.5);
@@ -67,7 +67,7 @@
     <script src="//cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
 </head>
 <body>
-    <header class="navbar is-transparent" id="topbar">
+    <header class="navbar is-transparent is-wide" id="topbar">
         <div class="navbar-brand">
             <a class="navbar-item" href="index.html">
                 <div class="logo">
@@ -89,6 +89,14 @@
                     <span class="spin-front"><em></em></span> <span class="spin-back"></span>
                 </div>
             </a>
+
+            <div class="logo-project">
+                <a href="#">
+                    Styleguide 
+                    <span class="tag is-primary is-light">v0.0.2</span>
+                </a>
+            </div>
+            
         </div>
 
         <div class="navbar-end">
@@ -98,7 +106,7 @@
                     <em></em>
                 </a>
                 <a class="dark-mode">
-                    <svg width="32px" height="32px" viewBox="0 0 502 502" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <svg width="1.5rem" height="1.5rem" viewBox="0 0 502 502" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <title>Light Mode</title>
                         <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
                             <g id="noun-dark-mode-4600782" transform="translate(0.168000, 0.168250)" fill-rule="nonzero">
@@ -126,7 +134,7 @@
     <main class="is-widescreen is-fullwidth container page-wrap">
         <div class="columns">
 
-            <div class="column menu-wrap is-narrow">
+            <div class="menu-wrap is-narrow">
                 <aside class="menu is-sticky">
                 
                     <p class="menu-label">
@@ -145,7 +153,8 @@
                     <ul class="menu-list">
                         <li><a href="#layouts">Layouts</a></li>
                         <li><a href="#ui">User Interfaces</a></li>
-                        <li><a href="#documentation">Documentation</a></li>
+                        <li><a href="#docs">Documentation</a></li>
+                        <li><a href="#slack">Slack Themes</a></li>
                         <li><a href="#slides">Slides</a></li>
                     </ul>
                     <p class="menu-label">
@@ -155,16 +164,62 @@
                         <li><a href="#developer">Developer Guide</a></li>
                         <li><a href="#resources">External Resources</a></li>
                         <li>&nbsp;</li>
-                        <li><a href="https://github.com/fermyon/styleguide" class="button is-round is-outlined is-size-6 is-medium">Styleguide Source</a></li>
+                        <li><a href="https://github.com/fermyon/styleguide" class="button is-round is-outlined is-size-6 is-medium">
+                            <svg width="0.825em" height="0.825em" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 0C7.16 0 0 7.16 0 16C0 23.08 4.58 29.06 10.94 31.18C11.74 31.32 12.04 30.84 12.04 30.42C12.04 30.04 12.02 28.78 12.02 27.44C8 28.18 6.96 26.46 6.64 25.56C6.46 25.1 5.68 23.68 5 23.3C4.44 23 3.64 22.26 4.98 22.24C6.24 22.22 7.14 23.4 7.44 23.88C8.88 26.3 11.18 25.62 12.1 25.2C12.24 24.16 12.66 23.46 13.12 23.06C9.56 22.66 5.84 21.28 5.84 15.16C5.84 13.42 6.46 11.98 7.48 10.86C7.32 10.46 6.76 8.82 7.64 6.62C7.64 6.62 8.98 6.2 12.04 8.26C13.32 7.9 14.68 7.72 16.04 7.72C17.4 7.72 18.76 7.9 20.04 8.26C23.1 6.18 24.44 6.62 24.44 6.62C25.32 8.82 24.76 10.46 24.6 10.86C25.62 11.98 26.24 13.4 26.24 15.16C26.24 21.3 22.5 22.66 18.94 23.06C19.52 23.56 20.02 24.52 20.02 26.02C20.02 28.16 20 29.88 20 30.42C20 30.84 20.3 31.34 21.1 31.18C27.42 29.06 32 23.06 32 16C32 7.16 24.84 0 16 0V0Z" fill="#24292E"/></svg>
+                            View on Github
+                        </a></li>
                     </ul>
                 </aside>
             </div>
             
             <article class="column content styleguide">
-                <section id="intro">
-                    <h1>Styleguide</h1>
-                    <p class="lead is-size-4">This document acts as a centralized reference for <a href="https://www.fermyon.com">Fermyon</a> branding, web element styling and design resources.</p>
-                    <p>We are creating and publishing of this styleguide with the goal of having consistent, accessible design patterns that we can use across our documents, products and various user-facing assets.</p>
+                <section id="intro" style="padding-top: 8.25rem; ">
+                    <svg width="82.5%" viewBox="0 0 3630 962" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3280" y="612" width="350" height="350" rx="175" fill="#34E8BD"/>
+                        <path d="M3435 101L2613 923" stroke="#0E8FDD" stroke-width="10"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1727 734H209V808.858L279.929 737.929L294.071 752.071L209 837.142V868.858L339.929 737.929L354.071 752.071L215.142 891H249L247.929 889.929L399.929 737.929L414.071 752.071L275.142 891H309L307.929 889.929L459.929 737.929L474.071 752.071L335.142 891H369L367.929 889.929L519.929 737.929L534.071 752.071L395.142 891H429L427.929 889.929L579.929 737.929L594.071 752.071L455.142 891H489L487.929 889.929L639.929 737.929L654.071 752.071L515.142 891H549L547.929 889.929L699.929 737.929L714.071 752.071L575.142 891H609L607.929 889.929L759.929 737.929L774.071 752.071L635.142 891H669L667.929 889.929L819.929 737.929L834.071 752.071L695.142 891H729L727.929 889.929L879.929 737.929L894.071 752.071L755.142 891H789L787.929 889.929L939.929 737.929L954.071 752.071L815.142 891H849L847.929 889.929L999.929 737.929L1014.07 752.071L875.142 891H909L907.929 889.929L1059.93 737.929L1074.07 752.071L935.142 891H969L967.929 889.929L1119.93 737.929L1134.07 752.071L995.142 891H1029L1027.93 889.929L1179.93 737.929L1194.07 752.071L1055.14 891H1089L1087.93 889.929L1239.93 737.929L1254.07 752.071L1115.14 891H1149L1147.93 889.929L1299.93 737.929L1314.07 752.071L1175.14 891H1209L1207.93 889.929L1359.93 737.929L1374.07 752.071L1235.14 891H1269L1267.93 889.929L1419.93 737.929L1434.07 752.071L1295.14 891H1329L1327.93 889.929L1479.93 737.929L1494.07 752.071L1355.14 891H1389L1387.93 889.929L1539.93 737.929L1554.07 752.071L1415.14 891H1449L1447.93 889.929L1599.93 737.929L1614.07 752.071L1475.14 891H1509L1507.93 889.929L1659.93 737.929L1674.07 752.071L1535.14 891H1569L1567.93 889.929L1719.93 737.929L1727 745V734ZM1727 759.142L1595.14 891H1629L1627.93 889.929L1727 790.858V759.142ZM1727 819.142L1655.14 891H1689L1687.93 889.929L1727 850.858V819.142ZM1727 879.142L1715.14 891H1727V879.142Z" fill="#BEA7E5"/>
+                        <path d="M0 80H3455V787H0V80Z" fill="#FCFCF6"/>
+                        <path d="M55.28 128.759V738.241H3399.72L3455 787H0V80L55.28 128.759Z" fill="#213762"/>
+                        <path d="M3435 101L2613 923" stroke="#0E8FDD" stroke-opacity="0.5" stroke-width="10" stroke-dasharray="20 20"/>
+                        <path d="M403.326 556C418.351 556 432.005 552.364 444.289 545.092C456.668 537.82 466.495 528.093 473.771 515.91C481.142 503.632 484.827 490.08 484.827 475.252C484.827 460.425 481.142 446.92 473.771 434.737C466.495 422.554 456.762 412.874 444.573 405.696C432.383 398.519 418.776 394.836 403.751 394.647L290.501 393.088C282.941 393.088 276.421 390.444 270.941 385.155C265.554 379.867 262.861 373.492 262.861 366.031C262.861 358.664 265.554 352.337 270.941 347.048C276.421 341.759 282.941 339.115 290.501 339.115H438.761V285.425H290.501C275.571 285.425 261.916 289.061 249.538 296.333C237.254 303.605 227.426 313.332 220.056 325.515C212.685 337.698 209 351.204 209 366.031C209 380.858 212.685 394.411 220.056 406.688C227.426 418.871 237.206 428.551 249.396 435.729C261.586 442.906 275.193 446.589 290.217 446.778L403.326 448.337C410.98 448.337 417.5 450.981 422.886 456.27C428.367 461.558 431.107 467.886 431.107 475.252C431.107 482.713 428.367 489.088 422.886 494.377C417.5 499.666 410.98 502.31 403.326 502.31H254.357V556H403.326Z" fill="#0D203F"/>
+                        <path d="M784.925 285.425V339.115H674.51V556H620.79V339.115H508.39V285.425H620.79H674.51H784.925Z" fill="#0D203F"/>
+                        <path d="M1109.69 285.425L1000.26 431.337V556H946.544V430.487L834.143 285.425H902.179L973.474 377.364L1042.5 285.425H1109.69Z" fill="#0D203F"/>
+                        <path d="M1218.29 501.885H1394.9V555.575H1218.29H1170.24H1164.43V285H1218.29V501.885Z" fill="#0D203F"/>
+                        <path d="M1729.37 339.115H1506.27V396.205H1660.63V449.895H1506.27V502.168H1729.37V556H1506.27H1458.65H1452.55V285.425H1506.27H1729.37V339.115Z" fill="#0D203F"/>
+                        <path d="M1917.92 339.115C1903.27 339.115 1889.9 342.798 1877.81 350.165C1865.71 357.531 1856.07 367.4 1848.89 379.772C1841.71 392.049 1838.12 405.696 1838.12 420.712C1838.12 435.634 1841.71 449.281 1848.89 461.653C1856.07 474.025 1865.71 483.894 1877.81 491.26C1889.9 498.532 1903.27 502.168 1917.92 502.168H2006.93V474.119H1926.99V420.288H2060.65V421.987V474.119V502.168V555.575H2006.93H1917.92C1899.49 555.575 1882.2 552.081 1866.04 545.092C1849.88 538.103 1835.66 528.423 1823.38 516.051C1811.19 503.679 1801.6 489.371 1794.6 473.128C1787.71 456.789 1784.26 439.317 1784.26 420.712C1784.26 402.108 1787.71 384.636 1794.6 368.297C1801.6 351.959 1811.19 337.651 1823.38 325.374C1835.66 313.002 1849.88 303.322 1866.04 296.333C1882.2 289.25 1899.49 285.708 1917.92 285.708H2014.59V339.115H1917.92Z" fill="#0D203F"/>
+                        <path d="M2382.51 285.425H2329.07V425.104C2329.07 439.459 2325.39 452.587 2318.02 464.486C2310.65 476.291 2300.77 485.735 2288.39 492.819C2276.11 499.807 2262.46 503.302 2247.43 503.302C2232.5 503.302 2218.85 499.807 2206.47 492.819C2194.09 485.735 2184.22 476.291 2176.84 464.486C2169.57 452.587 2165.93 439.459 2165.93 425.104V285.425H2112.49V425.104C2112.49 443.142 2115.99 460.095 2122.98 475.961C2129.98 491.733 2139.66 505.615 2152.04 517.61C2164.42 529.604 2178.73 539.001 2194.99 545.8C2211.34 552.6 2228.82 556 2247.43 556C2266.05 556 2283.53 552.6 2299.88 545.8C2316.22 539.001 2330.54 529.604 2342.82 517.61C2355.2 505.615 2364.89 491.733 2371.88 475.961C2378.97 460.095 2382.51 443.142 2382.51 425.104V285.425Z" fill="#0D203F"/>
+                        <path d="M2505.63 556V285.425H2451.91V556H2505.63Z" fill="#0D203F"/>
+                        <path d="M2725.34 285.425C2743.67 285.425 2760.87 288.967 2776.93 296.05C2793 303.038 2807.08 312.719 2819.17 325.09C2831.36 337.462 2840.91 351.817 2847.8 368.156C2854.8 384.494 2858.29 402.013 2858.29 420.712C2858.29 439.317 2854.8 456.836 2847.8 473.269C2840.91 489.608 2831.36 503.963 2819.17 516.335C2807.08 528.706 2793 538.434 2776.93 545.517C2760.87 552.506 2743.67 556 2725.34 556H2637.46H2583.74V502.452V338.973V285.425H2637.46H2725.34ZM2725.34 502.452C2739.99 502.452 2753.31 498.768 2765.31 491.402C2777.31 484.036 2786.9 474.166 2794.08 461.795C2801.27 449.423 2804.86 435.729 2804.86 420.712C2804.86 405.696 2801.27 392.002 2794.08 379.63C2786.9 367.259 2777.31 357.389 2765.31 350.023C2753.31 342.657 2739.99 338.973 2725.34 338.973H2637.46V502.452H2725.34Z" fill="#0D203F"/>
+                        <path d="M3190 339.115H2966.9V396.205H3121.26V449.895H2966.9V502.168H3190V556H2966.9H2919.28H2913.18V285.425H2966.9H3190V339.115Z" fill="#0D203F"/>
+                        <rect x="3414" y="80" width="40" height="40" fill="white"/>
+                        <rect x="3414" width="40.5063" height="80" fill="#0D203F"/>
+                        <rect x="3414" y="120" width="40.5063" height="80" fill="#0D203F"/>
+                        <rect x="3334" y="120.506" width="40.5063" height="80" transform="rotate(-90 3334 120.506)" fill="#0D203F"/>
+                        <rect x="3455" y="120.506" width="40.5063" height="80" transform="rotate(-90 3455 120.506)" fill="#0D203F"/>
+                        <path d="M165 622L506 622" stroke="#EF946C" stroke-width="9"/>
+                        <path d="M169 626L169 484" stroke="#EF946C" stroke-width="9"/>
+                        <path d="M169.5 512V473L154 517L169.5 512Z" fill="#EF946C"/>
+                        <path d="M169 512V473L184.5 517L169 512Z" fill="#EF946C"/>
+                        <path d="M501 622.5H540L496 607L501 622.5Z" fill="#EF946C"/>
+                        <path d="M501 622H540L496 637.5L501 622Z" fill="#EF946C"/>
+                        <rect x="2592.95" y="924.042" width="27" height="27" transform="rotate(-45 2592.95 924.042)" fill="white" stroke="#0E8FDD" stroke-width="7"/>
+                    </svg>
+                        
+                    <!-- <h1 class="is-size-1">Styleguide</h1> -->
+                    <h2 class="lead is-size-3">
+                        A visual reference manual<br>
+                        for <a href="https://www.fermyon.com">Fermyon</a> related materials.
+                        <br><br>
+                        <code class="copy is-size-4" style="padding-right: 2.5rem; margin-left: 0rem">
+                            yarn add --dev fermyon-styleguide
+                            <button class="button copy-button" data-clipboard-target="#seagreen">
+                                <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
+                            </button>
+                        </code>
+                    </h2>
+
+                    <br>
+                    <hr class="page-break">
                 </section>
 
                 <section id="color">
@@ -310,7 +365,7 @@ RGB (color) value</pre>
                         <div class="column is-one-quarter">
                             <div class="card card-color rust is-narrow">
                                 <div class="card-image">
-                                    <figure class="image copy-button" style="background-color: #0E8FDD;"></figure>
+                                    <figure class="image copy-button" style="background-color: #0E8FDD;" data-clipboard-target="#colablue-hex"></figure>
                                 </div>
                                 <div class="card-content">
                                     <p class="title is-6 color-variable copy">
@@ -634,27 +689,264 @@ RGB (color) value</pre>
                 <section id="type">
                     <h1>Typography</h1>
 
-                    <p>Austin deep v wayfarers, retro readymade quinoa af seitan meggings banjo. Deep v pitchfork 3 wolf moon, everyday carry prism chicharrones truffaut knausgaard succulents chartreuse photo booth church-key. Prism cred farm-to-table scenester cold-pressed cliche mlkshk banh mi umami chillwave vegan. PBR&B iPhone adaptogen irony tattooed kickstarter pork belly jianbing fashion axe forage normcore celiac blue bottle. Echo park bushwick cliche, selfies lo-fi hexagon four loko mumblecore mustache. 3 wolf moon brooklyn mlkshk chambray cornhole slow-carb tbh, artisan affogato drinking vinegar photo booth portland raw denim tofu poke.
+                    <p>Fermyon uses the Sen typeface, which is licensed under the <a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL">Open Font License</a>. Sen is freely availble via <a href="https://fonts.google.com/specimen/Sen#about">Google Fonts</a> and <a href="https://github.com/philatype/Sen">Github</a> for download.</p>
 
-                    <p>Normcore vaporware microdosing gochujang craft beer la croix chartreuse unicorn asymmetrical. Bitters kitsch banjo banh mi, unicorn before they sold out sartorial small batch authentic echo park artisan pinterest copper mug raw denim. Shoreditch stumptown vexillologist meditation salvia everyday carry actually +1. Photo booth 3 wolf moon mumblecore chartreuse leggings lo-fi master cleanse actually food truck before they sold out shabby chic. Banjo offal pinterest salvia kale chips.</p>
+                    <br>
+
+                    <div class="tile is-ancestor">
+                        <div class="tile is-parent">
+                            <div class="tile is-horizontal">
+                                <div class="tile box is-4 is-child">
+                                    <h2 style="font-size: 5rem">Sen</h2>
+
+                                    <p>Designer: <a href="https://fonts.google.com/?query=Kosal%20Sen">Kosal Sen</a><br>
+                                        <em>2015</em></p>
+
+                                </div>
+                                <div class="tile box is-child">
+                                    <p>A Geohumanist sans, Sen is Philatype’s first typeface released under the SIL Open Font License (OFL).</p>
+
+                                    <p>Sen is a geometrically constructed sans-serif with a sensible, friendly look. Think of it as a more neutral version of geometric classics such as Avenir or Futura with a humanist touch. It’s unassuming, unique, and most importantly, easy to read.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>When researching typefaces for our work, it became clear that the design intentions that went into the creation of Sen were very much in line with our own communication values. It's a perfect vehicle for our thoughts and ideas; in both principles and aesthetics.</p>
+                    <br>
+
+                    <nav class="level box">
+                        <div class="level-item has-text-centered">
+                            <div>
+                            <p class="heading">Bold</p>
+                            <p class="is-size-3"><strong>Sen Typeface</strong></p>
+                            </div>
+                        </div>
+                        <div class="level-item has-text-centered">
+                            <div>
+                            <p class="heading">Regular</p>
+                            <p class="is-size-3">Sen Typeface</p>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <br>
+                    <h2>Loading Webfonts</h2>
+
+                    <p>To reduce the size of assets being served, it's best to leverage a CDN where possible. Hence the Styleguide does not contain the bundled up webfont files alongside the images and other assets.</p>
+                    
+                    <pre>
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap" rel="stylesheet"&gt;</pre>
+
+                    <h2>Font Fallbacks</h2>
+
+                    <p>In some situations, access to external webfonts may not be possible (certain document formats or software services). If the font cannot be embedded using the <code>@import</code> method of serving it as a local asset, then a substition should be made to find a close match.</p>
+
+                    <p>The styleguide font stack defines a number of more common fallback options that are typically installed as defaults on standard devices OS:</p>
+
+                    <pre>
+Sen, Europa, Avenir, system, -apple-system, ".SFNSText-Regular", "San Francisco", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;</pre>
+
+                    <p>Learn more about <a href="https://css-tricks.com/css-basics-fallback-font-stacks-robust-web-typography/">Fallback Font Stacks</a> here. If a closer substitution is required, seek out other <a href="https://www.typewolf.com/top-10-humanist-sans-serif-fonts">Humanist Sans</a> and <a href="https://www.fontshop.com/content/short-intro-to-geometric-sans">Geometric Sans</a> options (Futura, Europa, Avenir are some well established ones, but have different levels of licensing requirements).</p>
+
+                    <h3>Text Example Styles</h3>
+
+                    <div class="columns">
+                        <div class="column is-one-third">
+                            <p>Refer to the <a href="#ui"><strong>User Interfaces</strong></a> section for examples of the different text formatting styles contained within the styleguide.</p>
+                        </div>
+                        <div class="column is-half is-pulled-right box">
+                            <h1>h1 Header</h1>
+                            <h2>h2 Title</h2>
+                            <h3>h3 Sub Title</h3>
+                            <a href="#ui">Full set of examples &rarr;</a>
+                        </div>
+                    </div>
+                    
+
+                    <h3>Baseline Text Size</h3>
+                    <p>The styleguide sets a root <code>font-size</code> of 16px, which is a conservative baseline, chosen to prioritize the presenation of technical content and long-form articles.</p>
+
+                    <p>In different contexts, this should adjust to suit the user's situation.</p>
+                    
+                    <p>For example, a technical documentation page benefits from a <em>wider</em> content width and tighter vertical spacing, to accomodate example code snippets; more akin to a legible applicance manual than a traditional book orientation.</p>
+
+                    <p>Blog articles on the other hand; benefit greatly from a bigger type size, along with a careful balance of width and spacing that mirrors the flow of a printed page (or that of an e-reader).</p>
+                    
+                    <p>All of this is important for minimizing the effort required of the user to parse, skim and flow through the various lines of content you are presenting to them. Consider their <em></em>mode</em>, and tailor the <a href="https://zellwk.com/blog/why-vertical-rhythms/">Vertical Rhythm</a> and <a href="https://www.gridlover.net/try">Typesetting</a> accordingly when you can.</p>
+
+                    <h3>Modifiers</h3>
+
+                    <p>To adjust the sizing of standard page copy, the content wrapper (denoted by the <code>.content</code> classname) can have these modifiers added:</p>
+
+                    <ul>
+                        <li><code>.size-16</code> (already the default)</li>
+                        <li><code>.size-18</code></li>
+                        <li><code>.size-20</code></li>
+                    </ul>
                 </section>
                 
                 <section id="logo">
+                    <hr class="page-break">
+                    
                     <h1>Logo</h1>
 
-                    <p>Austin deep v wayfarers, retro readymade quinoa af seitan meggings banjo. Deep v pitchfork 3 wolf moon, everyday carry prism chicharrones truffaut knausgaard succulents chartreuse photo booth church-key. Prism cred farm-to-table scenester cold-pressed cliche mlkshk banh mi umami chillwave vegan. PBR&B iPhone adaptogen irony tattooed kickstarter pork belly jianbing fashion axe forage normcore celiac blue bottle. Echo park bushwick cliche, selfies lo-fi hexagon four loko mumblecore mustache. 3 wolf moon brooklyn mlkshk chambray cornhole slow-carb tbh, artisan affogato drinking vinegar photo booth portland raw denim tofu poke.
+                    <p><img src="https://user-images.githubusercontent.com/686194/158033683-d0a096f7-ac4b-4052-97ab-ad8378aee70f.png" alt="Introducing the Fermyon Logo" /></p>
 
-                    <p>Normcore vaporware microdosing gochujang craft beer la croix chartreuse unicorn asymmetrical. Bitters kitsch banjo banh mi, unicorn before they sold out sartorial small batch authentic echo park artisan pinterest copper mug raw denim. Shoreditch stumptown vexillologist meditation salvia everyday carry actually +1. Photo booth 3 wolf moon mumblecore chartreuse leggings lo-fi master cleanse actually food truck before they sold out shabby chic. Banjo offal pinterest salvia kale chips.</p>
+                    <p>Wondering which version you should use in a particular setting? Read the <a class="#guidelines">Usage Guidelines</a>.</p>
+
+                    <br>
+
+                    <h3>Files &amp; Formats</h3>
+
+                    <table>
+                        <tr>
+                            <td>
+                                <p><img src="../image/logo.svg" alt="Fermyon Logo" style="max-height: 3rem; margin:1rem 0 1rem 2rem;" /></p>
+                            </td>
+                            <td>
+                                The F "icon" logo 
+                                <br>
+                                <small><em>(without padding)</em></small>
+                                <br><br>
+                                <a href="../image/logo.svg">SVG</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><img src="../image/avatar.png" alt="Fermyon Avatar" style="max-height: 6rem;" /></p>
+                            </td>
+                            <td>
+                                The F "icon" logo 
+                                <br>
+                                <small><em>(with padding)</em></small>
+                                <br><br>
+                                <a href="../image/avatar.png">PNG</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="../image/fermyon.svg" alt="Fermyon Wordmark" style="max-height: 3rem;margin: 1rem 0" />
+                            </td>
+                            <td>
+                                The "wordmark" text logo.
+                                <br><br>
+                                <a href="../image/fermyon.png">PNG</a> | <a href="../image/fermyon.svg">SVG</a>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <h3>The Doorway Icon</h3>
+
+                    <table>
+                        <tr>
+                            <td>
+                                <p><img src="../image/logo-badge.png" alt="Fermyon Doorway Logo" style="max-height: 7.5rem; margin:1rem 0 1rem 2rem;" /></p>
+                            </td>
+                            <td>
+                                <br>The "badgified" variant of our logo
+                                <br><br>
+                                <a href="../image/logo-badge.png">PNG</a> | <a href="../image/logo-badge.svg">SVG</a>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <h3>Logo Lockups</h3>
+
+                    <p class="box">
+                        <br>
+                        <img src="https://user-images.githubusercontent.com/686194/158033675-3df36c82-f9da-42c0-b4f3-e6b5979c3495.png" alt="Logo Lockup Combinations" />
+                    </p>
                 </section>
 
-                <section id="layout">
-                    <h1>Layout</h1>
+                <section id="illustration">
+                    <h1>Illustration</h1>
 
-                    <p>Austin deep v wayfarers, retro readymade quinoa af seitan meggings banjo. Deep v pitchfork 3 wolf moon, everyday carry prism chicharrones truffaut knausgaard succulents chartreuse photo booth church-key. Prism cred farm-to-table scenester cold-pressed cliche mlkshk banh mi umami chillwave vegan. PBR&B iPhone adaptogen irony tattooed kickstarter pork belly jianbing fashion axe forage normcore celiac blue bottle. Echo park bushwick cliche, selfies lo-fi hexagon four loko mumblecore mustache. 3 wolf moon brooklyn mlkshk chambray cornhole slow-carb tbh, artisan affogato drinking vinegar photo booth portland raw denim tofu poke.
+                    <h3>Decorative Designs</h3>
+
+                    <p>Examples on how to use the Fermyon brand styles to creating Illustrations like these:</p>
+
+                    <p><img src="https://user-images.githubusercontent.com/686194/158032613-b747fdb0-261a-4c38-90d1-76d799c637ed.png" alt="Fermyon Illustration" /></p>
+
+                    <p><small><em>Decoration from the footer of fermyon.com version 1.</em></small></p>
+
+                    <p><img src="https://user-images.githubusercontent.com/686194/158032619-9c94fecc-8f7c-4530-92a7-6a83b7bd661b.png" alt="Fermyon Illustration" /></p>
+
+                    <p><small><em>"infra-spaghetti" from the homepage of fermyon.com version 1.</em></small></p>
+
+                    <h3>Technology Illustrations</h3>
+
+                    <table class="is-bordered is-striped">
+                        <tr>
+                            <td>
+                                <img src="https://user-images.githubusercontent.com/686194/158032617-15c3611b-0542-4912-88c8-3dbf674df46f.png"  alt="Wasm Icons" />
+                            </td>
+                            <td>
+                                <img src="https://user-images.githubusercontent.com/686194/158032618-833fbaa2-fa5b-4a13-94f4-c9c87d0ad052.png"  alt="Wasm Icons" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <img src="https://user-images.githubusercontent.com/686194/158032616-4cea6494-4dd8-403b-9c2f-a4057939889f.png" alt="Wasm Icons">
+                            </td>
+                        </tr>
+                    </table>
+
+                    <h3>Icons</h3>
+
+                    <table class="is-bordered is-striped">
+                        <tr>
+                            <td>
+                                <img src="https://user-images.githubusercontent.com/686194/158032612-f46fd758-8be0-44f4-93e9-b3ad83a754e9.png" alt="Bindle" style="width: 5rem;">
+                            </td>
+                            <td><a href="https://github.com/deislabs/bindle/">Bindle</a>: Bindle: Object Storage for Collections </td>
+                        </tr>
+                    </table>
+
+
+
+
+                </section>
+
+                <section id="guidelines">
+                    <h1>Usage Guidelines</h1>
+
+                    <p>Some examples of common Do's &amp; Don'ts:</p>
+
+                    <p class="box"><img src="https://user-images.githubusercontent.com/686194/158033684-ca7a7fbc-444c-409f-8ee4-b5f405feec84.png" alt="Don't make things the same size" /></p>
+
+                    <p><small>Tips on choosing the right logo for the right setting.</small>
+
+                    <p class="box"><img src="https://user-images.githubusercontent.com/686194/158033682-415fadad-111d-49e6-a3cb-a1a8451ee221.png" style="margin-left: 2rem;" alt="Don't make things the same size" /></p>
+
+                    <p><small>Don't put the F inline like this.</small>
+
+                    <h3>Spacing Examples:</h3>
+
+                    <p><img src="../image/twitter_card_summary.png" alt="A stacked Fermyon logo and wordmark" /></p>
+
+                    <p><small>When combining elements, pay attention to the proportions and spacing. Keep things balanced &mdash; if it's hard to use both elements without undermining one of them, then just take it out and use the single element that works best in the situation.</small></p>
+
+                    <p><img src="../image/twitter_card_website.png" alt="A Fermyon Twitter Card" /></p>
+
+                    <p><small>When combining the wordmark with other content &mdash; The scaling of the logo and the text should be <em>similar</em>, otherwise the logo is overbearing.</small></p>
+
+                    <hr class="page-break">
+                </section>
+
+                <section id="layouts">
+                    <h1>Layouts</h1>
+
+                    <p><strong><em>Pending.</em></strong></p>
+                    <p>&nbsp;</p>
                         
-                    <blockquote>
-                        <p>Also worth looking at many useful Bulma <a href="https://bulmatemplates.github.io/bulma-templates/">layout templates available here</a>.</p>
-                    </blockquote>
+                    <aside>
+                        <p>Also worth looking at many useful Bulma <a href="https://bulmatemplates.github.io/bulma-templates/">layout templates available here</a>, as well as Luc Perkins' <a href="https://github.com/lucperkins/bulma-dashboard">bulma-dashboard</a> project.</p>
+                    </aside>
+
+                    <hr class="page-break">
                 </section>
 
                 <section id="ui">
@@ -874,7 +1166,59 @@ RGB (color) value</pre>
 
                 <section id="docs">
                     <h1>Documentation Styles</h1>
+
+                    <p>This styleguide is in itself an example of a Fermyon-themed documentation website.</p>
+                    
+                    <p>Built on the <a href="https://bulma.io/">Bulma</a> grid system with some layout tweaks (like a in the proportions of the left menu) and applying the colors, typography and other styles contained within this guide.</p>
+
+                    <blockquote>
+                        <blockquote>
+                            <p>As we build things and write docs, it's likely we will increase the code footprint of what goes into a docs site. Templates, additional features (search, versioning, languages) &mdash; and possibly adding configuration and examples that are specific to the site generation tools we're using to build these websites (aka <a href="https://github.com/fermyon/bartholomew">Bartholomew</a>).</p>
+                        </blockquote>
+                    </blockquote>
+
+                    <h3>Keep Navigation Consistent</h3>
+
+                    <p>Ideally the <code>footer</code> sections of a documentation site should tie back into the rest of Fermyon.com, so that the UX of navigating between different sites, apps and docs is not too <em>choppy</em>.</p>
+
+                    <p>That means the top bar should be close to <a href="https://www.fermyon.com">fermyon.com</a>, and clearly provide links to the global home (<code>fermyon.com</code>) as well as the local root (<code>/</code>) of the docs site you are viewing. This is demonstrated by the Fermyon > Styleguide hierarchy in the title bar above.</p>
+
+                    <h3>Nice Docs</h3>
+
+                    <p>Inspiration comes from many resources, such as <a href="https://github.com/beautiful-docs/beautiful-docs">beautiful-docs</a> and the wonderful <a href="https://docs.readthedocs.io/en/stable/">ReadtheDocs.org</a>. </p>
                 </section>
+
+                <section id="slack">
+                    <h1>Slack Themes</h1>
+
+                    <p>As <a href="https://www.fermyon.com/jobs/index">a fully remote company</a>, Slack plays a central role in our work. To decorate the workspace appropriately, here are some Fermyon themes to suit you day / night preference:</p>
+
+                    <div class="columns is-multiline">
+                        <div class="column box">
+                            <h4 class="title is-5">Light Theme</h4>
+
+                            <img src="https://user-images.githubusercontent.com/686194/158027354-f2d33b1e-509c-419e-a71e-799e8dea2340.jpg" alt="Light Theme Preview">
+
+                            <small>Copy and paste these values to share your Slack settings Sidebar Theme section:</small>
+
+                            <pre>
+#F8F4F9,#34E8BD,#0D203F,#34E8BD,#D9DBE8,#0D203F,#34E8BD,#EF946C,#ECEDF4,#0D203F</pre>
+                        </div>
+
+                        <div class="column box">
+                            <h4 class="title is-5">Dark Theme</h4>
+
+                            <img src="https://user-images.githubusercontent.com/686194/158027357-f7a44920-8500-47d2-b1d6-a39b465eb53a.jpg" alt="Dark Theme Preview">
+
+                            <small>Copy and paste these values to share your Slack settings Sidebar Theme section:</small>
+
+                            <pre>
+#0D203F,#34E8BD,#0A191F,#34E8BD,#0A191F,#BEA7E5,#34E8BD,#EF946C,#0D203F,#0D203F</pre>
+                        </div>
+                    </div>
+
+                    <p>Visit <a href="https://get.slack.help/hc/en-us/articles/205166337-Customizing-your-Slack-theme">Customizing Your Slack Theme</a> for further instructions on custom themes.</p>
+                </section>                
 
                 <section id="slides">
                     <h1>Slides &amp; Document Templates</h1>
@@ -887,34 +1231,49 @@ RGB (color) value</pre>
                             <a href="https://fermyontech-my.sharepoint.com/:p:/g/personal/ronan_fermyon_com/EQ5CHgYnNLJBqzyx2qu0a8kBxKTOY-ApVkvnCYyf1wmBsg?e=U1eBPC"><img src="https://user-images.githubusercontent.com/686194/157764095-c7cd36de-5a57-494d-a662-6131d7f67876.jpg" alt="Powerpoint Template" /></a>
                         </div>
                         <div class="card-content">
-                          <div class="media">
-                            <div class="media-content">
-                              <p class="title is-5"><a href="https://fermyontech-my.sharepoint.com/:p:/g/personal/ronan_fermyon_com/EQ5CHgYnNLJBqzyx2qu0a8kBxKTOY-ApVkvnCYyf1wmBsg?e=U1eBPC">PowerPoint</a></p>
-                              <p class="is-size-6">.ppt</p>
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-5"><a href="https://fermyontech-my.sharepoint.com/:p:/g/personal/ronan_fermyon_com/EQ5CHgYnNLJBqzyx2qu0a8kBxKTOY-ApVkvnCYyf1wmBsg?e=U1eBPC">PowerPoint</a></p>
+                                    <p class="is-size-6">.ppt</p>
+                                </div>
                             </div>
-                          </div>
                       
-                          <div class="content is-size-6">
-                            A presenation template with editable title "splash" pages and a mixture of light and dark text slides.
-                          </div>
+                            <div class="content is-size-6">
+                                A presenation template with editable title "splash" pages and a mixture of light and dark text slides.
+                            </div>
                         </div>
-                      </div>
-
-
+                    </div>
                 </section>
 
                 <section id="developer">
                     <h1>Developer Guide</h1>
 
-                    <h3>Working on the Styleguide</h3>
+                    <p><strong><em>Pending.</em></strong></p>
+                    <p>&nbsp;</p>
 
-                    <h3>Built with Bulma</h3>
+                    <p>Working on the Styleguide</p>
+
+                    <p>Running the Styleguide locally</p>
+
+                    <p>The CSS Stack</p>
 
                     <h3>Where's the JavaScript?</h3>
+                    <p>This styleguide is intentionally very light on JavaScript. It's common for modern front-end frameworks to be very opinionated about the interactive function in addition to the visual form. In many popular common style frameworks, it becomes a challenge to keep things light and to enables certain interactive parts (like dropdown menus) without importing multiple additional scripts (jquery, bootstrap.js, icon fonts). And typically the content being served only uses a tiny subset of the imports.</p>
+
+                    <p>At Fermyon, we want to keep our apps light and fast, so that they compile to small sizes and run without requiring a lot of additional libraries, scripts, webfonts, icons, etc. Hence this styleguide is focused on just the visual portion - different projects can build upon these building blocks and utilize other libraries as needed.</p>                    
+
+                    <p><a href="https://bulma.io">Bulma</a> stays true to this, relying on progressive CSS methods for interactive elements like modal pop-up windows and dropdown menus (via the <code>data-target</code> selector attributes for example) and avoids taking on javascript dependencies.</p>
                 </section>
 
                 <section id="resources">
                     <h1>External Resources</h1>
+
+                    <p>Useful links for making icons, designs and layouts.</p>
+
+                    <ul>
+                        <li><a href="https://realfavicongenerator.net/">Favicons:</a> the best tool for rendering high quality, browser and device-friendly icons</li>
+                        <li><a href="https://practicaltypography.com/">Practical Typography</a>: one of the best resources on how best to present words.</li>
+                    </ul>
 
                     <h3>Accessibility</h3>
 
