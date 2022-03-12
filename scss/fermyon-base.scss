@@ -1,4 +1,4 @@
-/* 3. 
+/* 3.
    Global Base
 */
 
@@ -14,7 +14,6 @@ main {
 body {
     background: lighten($lightlavender, 5%);
     min-height: 100vh;
-    overflow-x: hidden;
 }
 
 main {
@@ -65,34 +64,34 @@ main {
         0% {
           transform: rotate(0);
         }
-        
+
         25% {
           transform: rotate(180deg);
           opacity: 1;
         }
-        
+
         38% {
           opacity: 0.75;
         }
-        
+
         50% {
           transform: rotate(180deg);
         }
-        
+
         75% {
           transform: rotate(360deg);
           opacity: 1;
         }
-        
+
         88% {
           opacity: 0.75;
         }
-        
+
         100% {
           transform: rotate(360deg);
         }
       }
-      
+
       .logo {
         display: inline-block;
         margin-top: 0;
@@ -108,13 +107,13 @@ main {
             z-index: 500;
             fill: $oxfordblue;
         }
-        
+
         &:hover {
             .spin-back {
                 background-color: white;
             }
         }
-        
+
         .spin-front {
           width: 1.133rem;
           height: 1.133rem;
@@ -127,7 +126,7 @@ main {
           opacity: 1;
           animation: 4s ease infinite halfSpin;
           @include transition;
-          
+
           em {
             width: 0.425rem;
             height: 0.425rem;
@@ -168,7 +167,7 @@ main {
             color: $oxfordblue;
             @include sen;
             @include transition;
-            
+
             em {
                 position: absolute;
                 left: 45%;
@@ -254,7 +253,7 @@ footer {
         .navbar {
             padding: 0;
             background: transparent;
-    
+
             .navbar-item {
                 padding: 0 4rem 0 0;
                 font-size: 1rem;
@@ -286,7 +285,7 @@ body.dark-theme {
     background: $oxfordblue;
     color: white;
 
-    h1, h2, h3, h4, p, li {
+    h1, h2, h3, h4, h5, p, li {
         color: white;
     }
 
