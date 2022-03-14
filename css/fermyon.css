@@ -24,7 +24,7 @@ TABLE OF CONTENTS
 /* 2.
    Variables and Mixins
 */
-/* 3. 
+/* 3.
    Global Base
 */
 html {
@@ -43,7 +43,7 @@ body {
 }
 
 main {
-  padding: 8.75rem 0 0;
+  padding: 5.75rem 0 0;
   min-height: 100vh;
   margin-bottom: -12rem;
   z-index: 100;
@@ -65,10 +65,14 @@ main {
   width: 5.25rem;
   height: 5.25rem;
 }
+#topbar.navbar.is-wide {
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+}
 #topbar.navbar .dark-mode {
   position: absolute;
   right: 0;
-  top: 1.636rem;
+  top: 2rem;
   display: inline-block;
   width: 1.5rem;
   line-height: 1.5;
@@ -217,7 +221,13 @@ main {
 }
 
 .menu-wrap {
-  padding: 0 5vw;
+  padding: 0 2.5vw;
+  width: 17rem;
+  outline: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+.menu-wrap:hover {
+  outline: 2px solid #ECE5EE;
 }
 
 aside.menu {
@@ -241,20 +251,30 @@ aside.menu a {
   border-radius: 2rem 2rem 2rem 2rem;
 }
 aside.menu a:hover {
-  background-color: #34E8BD;
-  color: white;
+  background-color: #ECE5EE;
+  color: #213762;
 }
 aside.menu a.button {
-  line-height: 2.333;
-  margin-top: 1.5rem;
-  padding: 0 1.25vw;
+  line-height: 2.25;
+  margin-top: 1.25rem;
+  padding: 0 1.333vw;
   font-size: 1.125rem;
   background: transparent;
   border: 2px solid #34E8BD;
 }
+aside.menu a.button svg {
+  margin-right: 0.25rem;
+  margin-bottom: -1px;
+}
+aside.menu a.button svg, aside.menu a.button path {
+  transition: all 0.3s ease-in-out;
+}
 aside.menu a.button:hover {
   background-color: #34E8BD;
   color: white;
+}
+aside.menu a.button:hover svg, aside.menu a.button:hover path {
+  fill: white;
 }
 @media screen and (min-width: 1024px) {
   aside.menu.is-fixed-desktop {
@@ -274,8 +294,9 @@ aside.menu a.button:hover {
 @media screen and (min-width: 1024px) {
   aside.menu.is-sticky {
     position: sticky;
-    left: 5.5vw;
-    top: 0;
+    left: 2.5vw;
+    top: 5.75rem;
+    padding-left: 0.67rem;
     bottom: 0;
     display: inline-block;
     vertical-align: top;
@@ -287,7 +308,8 @@ aside.menu a.button:hover {
 .page-wrap {
   position: relative;
 }
-.page-wrap.is-fullwidth {
+
+.is-fullwidth {
   width: 100vw;
   max-width: 100vw !important;
 }
@@ -315,10 +337,70 @@ hr.page-break:after {
   border-radius: 0.33rem 0.33rem 0.33rem 0.33rem;
 }
 
+.documentation .content {
+  padding-top: 8.5rem;
+  margin-bottom: 5rem;
+}
+.documentation .content .footer-nav {
+  border-top: none;
+}
+.documentation .content.content-docs-wide section {
+  max-width: 90vw !important;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+.documentation .content.content-docs-wide section .content ul, .documentation .content.content-docs-wide section .content ol, .documentation .content.content-docs-wide section .content dl, .documentation .content.content-docs-wide section .content p, .documentation .content.content-docs-wide section .content blockquote {
+  max-width: 100%;
+}
+.documentation footer {
+  padding-left: 2.5vw !important;
+  padding-right: 2.5vw !important;
+}
+.documentation footer .footer-nav {
+  padding: 0 0.75rem;
+  margin: 0;
+  border-top: none;
+}
+
 .content section {
   margin-left: auto;
   margin-right: auto;
   max-width: 48.5rem;
+}
+.content section .box {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  padding: 1.67rem 2rem;
+}
+.content section table {
+  background-color: white;
+  min-width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  border-collapse: collapse;
+  border-radius: 0.333em;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(30, 30, 30, 0.125);
+}
+.content section table th, .content section table td {
+  padding: 0.67vw 2vw;
+  border-bottom: 1px solid #BEA7E5;
+  line-height: 1.5;
+}
+.content section table th {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #0D203F;
+  background-color: #F9F7EE;
+  line-height: 1.75;
+  border-bottom: 1px solid #BEA7E5;
+}
+.content section table td {
+  font-size: 1rem;
+  border-bottom-color: #ECE5EE;
+}
+.content section table tr:last-of-type td {
+  border: none;
 }
 
 footer {
@@ -355,8 +437,14 @@ footer li {
   font-size: 1.125rem;
 }
 footer img {
-  max-height: 5rem;
-  margin-top: 1rem;
+  max-height: 3rem;
+  margin-top: 0;
+}
+footer.is-shallow {
+  min-height: 6.5rem;
+}
+footer.is-shallow img {
+  max-height: 2.5rem;
 }
 footer .footer-nav {
   border-top: 1px solid #D9DBE8;
@@ -387,6 +475,10 @@ footer .footer-nav p {
 
 body.dark-theme {
   background: #0D203F;
+  color: white;
+}
+body.dark-theme h1, body.dark-theme h2, body.dark-theme h3, body.dark-theme h4, body.dark-theme h5, body.dark-theme p, body.dark-theme li {
+  color: white;
 }
 body.dark-theme #topbar.navbar {
   background: #0D203F;
@@ -416,6 +508,9 @@ body.dark-theme #topbar.navbar .dark-mode svg {
   transform: rotate(180deg);
   transition: all 0.3s ease-in-out;
 }
+body.dark-theme .menu-wrap:hover {
+  outline: 2px solid #321a59;
+}
 body.dark-theme aside.menu {
   left: 5vw;
 }
@@ -424,6 +519,7 @@ body.dark-theme aside.menu a {
 }
 body.dark-theme aside.menu a:hover {
   color: #0D203F;
+  background-color: #213762;
 }
 body.dark-theme pre {
   background: linear-gradient(0, #173564 15%, #233e68 100%);
@@ -438,6 +534,31 @@ body.dark-theme .card figure.image {
   border-bottom: 1px solid rgba(255, 255, 255, 0.333);
 }
 body.dark-theme .card p {
+  color: white;
+}
+body.dark-theme .content .box {
+  background-color: #213762;
+  color: white;
+}
+body.dark-theme .content h1 code, body.dark-theme .content h2 code, body.dark-theme .content h3 code, body.dark-theme .content h4 code, body.dark-theme .content h5 code, body.dark-theme .content p code, body.dark-theme .content li code, body.dark-theme .content th code, body.dark-theme .content td code, body.dark-theme .content dd code {
+  background-color: #213762;
+  color: #ECE5EE;
+}
+body.dark-theme .content section table {
+  background-color: #213762;
+}
+body.dark-theme .content blockquote {
+  background-color: transparent;
+}
+body.dark-theme .content blockquote p {
+  background-color: #243c6c;
+  border-color: #2b477f;
+  color: white;
+}
+body.dark-theme .content blockquote > blockquote p,
+body.dark-theme .content aside p {
+  background-color: #243c6c;
+  border-color: #2b477f;
   color: white;
 }
 body.dark-theme footer {
@@ -459,58 +580,90 @@ body.dark-theme footer p, body.dark-theme footer li, body.dark-theme footer a {
    Typography
 */
 body {
-  font-family: "Sen", sans-serif;
+  font-family: Sen, Europa, Avenir, system, -apple-system, ".SFNSText-Regular", "San Francisco", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   font-size: 16pt;
   color: #0D203F;
 }
 
-article {
+.content {
   /* Code Styling */
   /* highlight.js css */
 }
-article h1, article h2, article h3 {
+.content h1, .content h2, .content h3 {
   font-weight: bold;
   display: block;
 }
-article ul, article ol, article dl, article p, article blockquote {
+.content ul, .content ol, .content dl, .content p, .content blockquote {
   margin: 1.67rem 0;
   font-size: 1rem;
   max-width: 800px;
 }
-article ul li {
+.content.size-16 ul, .content.size-16 ol, .content.size-16 dl, .content.size-16 p, .content.size-16 blockquote {
+  font-size: 1rem;
+}
+.content.size-18 ul, .content.size-18 ol, .content.size-18 dl, .content.size-18 p, .content.size-18 blockquote {
+  font-size: 1.125rem;
+}
+.content.size-20 ul, .content.size-20 ol, .content.size-20 dl, .content.size-20 p, .content.size-20 blockquote {
+  font-size: 1.25rem;
+}
+.content ul li {
   list-style: disc;
   list-style-position: outside;
   line-height: 1.636;
   margin: 0 0.5rem 0 1.25rem;
   padding-left: 0.5rem;
 }
-article ol li {
+.content ol li {
   list-style-position: outside;
   line-height: 1.636;
   margin: 0 0.5rem 0 1.25rem;
   padding-left: 0.5rem;
 }
-article blockquote,
-article aside {
-  font-size: 1rem;
-  padding: 1.67rem 7.5% 1.67rem 1.5rem !important;
-  margin: 1.5em auto 2.5rem !important;
+.content blockquote > blockquote,
+.content aside {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
-article blockquote p,
-article aside p {
-  font-size: 1rem !important;
-  line-height: 1.825;
-  margin: 0 !important;
-}
-article strong {
+.content blockquote > blockquote p,
+.content aside p {
+  line-height: 1.8;
+  border: 1px solid #D9DBE8;
+  font-size: 1.2rem;
+  background: #F9F7EE;
+  padding: 1.25rem 1.5rem !important;
+  margin: 2.5em auto 5rem !important;
+  text-align: left;
+  border-radius: 0.667rem;
+  box-shadow: 0 3px 6px rgba(30, 30, 30, 0.125);
   color: #0D203F;
 }
-article a {
+.content blockquote {
+  padding: 0rem 0 !important;
+  margin: 0 !important;
+  border-left: none;
+}
+.content blockquote p {
+  color: #081f24;
+  color: #345995;
+  font-size: 1.1rem !important;
+  line-height: 2;
+  padding-right: 0 !important;
+  border-left: 4px solid #D9DBE8;
+  background: #f4f0f5;
+  padding: 0.65rem 5% 0.65rem 2rem !important;
+  margin: 1rem auto 1rem !important;
+  text-align: left;
+}
+.content strong {
+  color: #0D203F;
+}
+.content a {
   color: #0a68a1;
   border-radius: 0.1em;
   position: relative;
 }
-article a:after {
+.content a:after {
   position: absolute;
   text-align: center;
   background: #0E8FDD;
@@ -523,41 +676,41 @@ article a:after {
   right: 33%;
   transition: all 0.3s ease-in-out;
 }
-article a:hover {
+.content a:hover {
   background: rgba(255, 255, 255, 0.67);
   color: #0E8FDD;
 }
-article a:hover:after {
+.content a:hover:after {
   opacity: 1;
   left: 5%;
   right: 5%;
 }
-article a:hover img + :after {
+.content a:hover img + :after {
   display: none !important;
   margin-top: -4rem;
 }
-article hr.page-break {
+.content hr.page-break {
   text-align: left;
   height: 4rem;
   background: transparent;
 }
-article hr.page-break:after {
+.content hr.page-break:after {
   position: relative;
   width: 12.5%;
   margin: 1.5rem 0 2.5rem;
   height: 0.33rem;
 }
-article .copy {
+.content .copy {
   padding: 0.5rem 1rem;
   position: relative;
   border-radius: 1rem;
   margin-left: -1.5rem;
   margin-right: -1.5rem;
 }
-article .copy img {
+.content .copy img {
   width: 1em;
 }
-article .copy .button {
+.content .copy .button {
   position: absolute;
   padding: 0;
   line-height: 1;
@@ -567,17 +720,17 @@ article .copy .button {
   opacity: 0;
   background: transparent;
 }
-article .copy:hover {
+.content .copy:hover {
   background: rgba(100, 100, 100, 0.17);
 }
-article .copy:hover .button {
+.content .copy:hover .button {
   opacity: 1;
 }
-article .copy-button {
+.content .copy-button {
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
-article .copy-button:after {
+.content .copy-button:after {
   content: "Copied";
   transition: all 0.3s ease-in-out;
   display: inline-block;
@@ -595,53 +748,62 @@ article .copy-button:after {
   opacity: 0;
   color: white;
 }
-article .copy-button:active {
+.content .copy-button:active {
   opacity: 0.8;
 }
-article .copy-button:active:after {
+.content .copy-button:active:after {
   top: 50%;
   opacity: 1;
 }
-article .card p {
+.content .card p {
   margin: 0;
   line-height: 1.25;
   color: #0D203F;
 }
-article .card p.title {
+.content .card p.title {
   margin-bottom: 0.5rem;
 }
-article .card p em {
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+.content .card p em {
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
   font-style: normal;
   opacity: 0.333;
   display: inline-block;
   padding: 0 0.2rem 0 0;
 }
-article .card.card-color {
-  border-radius: 0.75rem;
+.content .card.card-color {
+  border-radius: 0.33rem;
   overflow: hidden;
 }
-article .card.card-color figure.image {
+.content .card.card-color figure.image {
   border: 5px solid transparent;
   transition: all 0.3s ease-in-out;
 }
-article .card.card-color figure.image:hover {
+.content .card.card-color figure.image:hover {
   border-color: white;
 }
-article .card.card-color .card-content {
+.content .card.card-color .card-content {
   padding: 0.5rem 0.5rem 1rem;
 }
-article .card.card-color .card-content p {
+.content .card.card-color .card-content p {
   margin: 0 0 -0.333rem;
   letter-spacing: -0.02em;
 }
-article p code {
+.content h1 code,
+.content h2 code,
+.content h3 code,
+.content h4 code,
+.content h5 code,
+.content p code,
+.content li code,
+.content td code,
+.content th code,
+.content dd code {
   border-radius: 0.33rem !important;
   background: #e9e1eb;
   color: #345995;
 }
-article pre,
-article code {
+.content pre,
+.content code {
   margin-left: 0;
   border-radius: 0.67rem;
   background-color: #0D203F;
@@ -649,66 +811,72 @@ article code {
   color: white;
   font-size: 0.925rem;
   color: #BEA7E5;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
 }
-article pre a,
-article code a {
+.content pre a,
+.content code a {
   color: #0E8FDD;
 }
-article pre code.hljs,
-article code code.hljs {
+.content pre code.hljs,
+.content code code.hljs {
   padding: 0 !important;
 }
-article pre code.hljs .hljs-meta,
-article code code.hljs .hljs-meta {
+.content pre code.hljs .hljs-meta,
+.content code code.hljs .hljs-meta {
   color: #34E8BD;
 }
-article code {
+.content pre {
+  margin: 1.333rem 0;
+  max-width: 100%;
+  position: relative;
+}
+.content code {
   border-radius: 0 !important;
 }
-article pre code.hljs {
+.content pre code.hljs {
   display: block;
   overflow-x: auto;
   padding: 1em;
 }
-article code.hljs {
+.content code.hljs {
   padding: 3px 5px;
 }
-article .hljs {
+.content .hljs {
   color: #abb2bf;
   background: #282c34;
 }
-article .hljs-comment, article .hljs-quote {
+.content .hljs-comment, .content .hljs-quote {
   color: #5c6370;
   font-style: italic;
 }
-article .hljs-doctag, article .hljs-formula, article .hljs-keyword {
+.content .hljs-doctag, .content .hljs-formula, .content .hljs-keyword {
   color: #c678dd;
 }
-article .hljs-deletion, article .hljs-name, article .hljs-section, article .hljs-selector-tag, article .hljs-subst {
+.content .hljs-deletion, .content .hljs-name, .content .hljs-section, .content .hljs-selector-tag, .content .hljs-subst {
   color: #e06c75;
 }
-article .hljs-literal {
+.content .hljs-literal {
   color: #56b6c2;
 }
-article .hljs-addition, article .hljs-attribute, article .hljs-meta .hljs-string, article .hljs-regexp, article .hljs-string {
+.content .hljs-addition, .content .hljs-attribute, .content .hljs-meta .hljs-string, .content .hljs-regexp, .content .hljs-string {
   color: #98c379;
 }
-article .hljs-attr, article .hljs-number, article .hljs-selector-attr, article .hljs-selector-class, article .hljs-selector-pseudo, article .hljs-template-variable, article .hljs-type, article .hljs-variable {
+.content .hljs-attr, .content .hljs-number, .content .hljs-selector-attr, .content .hljs-selector-class, .content .hljs-selector-pseudo, .content .hljs-template-variable, .content .hljs-type, .content .hljs-variable {
   color: #d19a66;
 }
-article .hljs-bullet, article .hljs-link, article .hljs-meta, article .hljs-selector-id, article .hljs-symbol, article .hljs-title {
+.content .hljs-bullet, .content .hljs-link, .content .hljs-meta, .content .hljs-selector-id, .content .hljs-symbol, .content .hljs-title {
   color: #61aeee;
 }
-article .hljs-built_in, article .hljs-class .hljs-title, article .hljs-title.class_ {
+.content .hljs-built_in, .content .hljs-class .hljs-title, .content .hljs-title.class_ {
   color: #e6c07b;
 }
-article .hljs-emphasis {
+.content .hljs-emphasis {
   font-style: italic;
 }
-article .hljs-strong {
+.content .hljs-strong {
   font-weight: 700;
 }
-article .hljs-link {
+.content .hljs-link {
   text-decoration: underline;
 }
 
