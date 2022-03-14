@@ -21,6 +21,43 @@ TABLE OF CONTENTS
 /* 1.
    Brand Colors
 */
+.is-primary, .has-text-primary {
+  color: #0D203F !important;
+}
+
+.is-link, .has-text-link {
+  color: #0a68a1 !important;
+}
+
+.is-info, .has-text-info {
+  color: #a180d9 !important;
+}
+
+.is-success, .has-text-success {
+  color: #18907b !important;
+}
+
+.is-warning, .has-text-warning {
+  color: #EF946C !important;
+}
+
+.is-danger, .has-text-danger {
+  color: #c64b16 !important;
+}
+
+.is-dark, .has-text-dark {
+  color: #213762 !important;
+}
+
+.is-light, .has-text-light {
+  color: #b69cc0 !important;
+}
+
+.is-active, .is-current {
+  color: white;
+  background-color: #213762;
+}
+
 /* 2.
    Variables and Mixins
 */
@@ -613,6 +650,13 @@ body {
   line-height: 1.636;
   margin: 0 0.5rem 0 1.25rem;
   padding-left: 0.5rem;
+}
+.content ul.is-clean li, .content ul.pagination-list li {
+  list-style: none;
+}
+.content ul.is-disc li {
+  list-style: disc;
+  list-style-position: outside;
 }
 .content ol li {
   list-style-position: outside;
