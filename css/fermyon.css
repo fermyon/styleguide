@@ -53,6 +53,43 @@ TABLE OF CONTENTS
   color: #b69cc0 !important;
 }
 
+.button.is-primary, .tag.is-primary, .message.is-primary {
+  background-color: #18d1a5;
+  color: white !important;
+}
+.button.is-secondary, .tag.is-secondary, .message.is-secondary {
+  background-color: #315292;
+  color: white !important;
+}
+.button.is-link, .tag.is-link, .message.is-link {
+  background-color: #0a68a1 !important;
+  color: white !important;
+}
+.button.is-info, .tag.is-info, .message.is-info {
+  background-color: #a180d9 !important;
+  color: white !important;
+}
+.button.is-success, .tag.is-success, .message.is-success {
+  background-color: #18907b !important;
+  color: white !important;
+}
+.button.is-warning, .tag.is-warning, .message.is-warning {
+  background-color: #EF946C !important;
+  color: white !important;
+}
+.button.is-danger, .tag.is-danger, .message.is-danger {
+  background-color: #c64b16 !important;
+  color: white !important;
+}
+.button.is-dark, .tag.is-dark, .message.is-dark {
+  background-color: #213762;
+  color: white !important;
+}
+.button.is-light, .tag.is-light, .message.is-light {
+  background-color: #b69cc0;
+  color: #0D203F !important;
+}
+
 .is-active, .is-current {
   color: white;
   background-color: #213762;
@@ -651,8 +688,12 @@ body {
   margin: 0 0.5rem 0 1.25rem;
   padding-left: 0.5rem;
 }
-.content ul.is-clean li, .content ul.pagination-list li {
+.content ul.pagination-list {
+  margin: 0;
+}
+.content ul.pagination-list li {
   list-style: none;
+  margin: 0;
 }
 .content ul.is-disc li {
   list-style: disc;
