@@ -26,6 +26,9 @@
   "dependencies": {
     "parcel": "^2.3.2"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build":  "parcel build docs/index.html",
     "dev":    "parcel serve docs/index.html --open",
