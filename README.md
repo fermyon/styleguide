@@ -70,7 +70,7 @@ npm run dev
 If you just want to rebuild CSS your edits, run:
 
 ```
-npm run styles
+npm run watch
 ```
 
 Changes can be viewed and tested at [http://localhost:1234/](http://localhost:1234/).

@@ -1,10 +1,10 @@
 {
-  "name": "fermyon-styleguide",
-  "version": "0.1.1",
+  "name": "@fermyon/styleguide",
+  "version": "0.1.2",
   "homepage": "https://github.com/fermyon/styleguide",
   "author": {
     "name": "Ronan Flynn-Curran",
-    "email": "dev@ronan.design",
+    "email": "ronan@fermyon.com",
     "url": "https://fermyon.com"
   },
   "description": "Re-usable design elements and styles for Fermyon",
@@ -27,10 +27,10 @@
     "parcel": "^2.3.2"
   },
   "scripts": {
-    "build":  "yarn parcel build docs/index.html",
-    "dev":    "yarn parcel serve docs/index.html --open",
-    "styles": "yarn parcel build scss/fermyon.scss --dist-dir css",
-    "watch": "yarn parcel watch scss/fermyon.scss --dist-dir css"
+    "build":  "parcel build docs/index.html",
+    "dev":    "parcel serve docs/index.html --open",
+    "styles": "parcel build scss/fermyon.scss --dist-dir css",
+    "watch": "parcel watch scss/fermyon.scss --dist-dir css"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "2.3.2"
