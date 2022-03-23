@@ -2,8 +2,8 @@
    Variables and Mixins
 */
 
-$sen: 'Sen', sans-serif;
-$mono: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+$sen: Sen, Europa, Avenir, system, -apple-system, ".SFNSText-Regular", "San Francisco", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+$mono: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
 
 @mixin transition($property:all, $duration:0.3s, $easing:ease-in-out) {
     transition: $property $duration $easing;
