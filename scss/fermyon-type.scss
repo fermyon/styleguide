@@ -134,6 +134,24 @@ body {
         }
     }
 
+    pre,
+    code {
+        margin-bottom: 2rem !important;
+    }
+
+    pre {
+        code {
+            margin-bottom: 0 !important;
+        }
+    }
+
+    h1, h2, h3, h4, h5 {
+        code {
+            font-weight: bold;
+            font-size: 1em !important;
+        }
+    }
+
     strong {
         color: $oxfordblue;
     }
