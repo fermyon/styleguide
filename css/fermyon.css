@@ -857,6 +857,10 @@ body {
   padding: 1.25rem 1.5rem !important;
 }
 
+.content blockquote > blockquote a, .content aside a {
+  color: #0e8fdd;
+}
+
 .content blockquote {
   border-left: none;
   margin: 0 !important;
