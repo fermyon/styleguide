@@ -1,28 +1,26 @@
-[![styleguide-logo](https://user-images.githubusercontent.com/686194/159795633-67623aca-bf98-4e92-954f-3e1bbbcc8901.png)](https://fermyon-styleguide.netlify.app/)
-
+[![styleguide-logo](https://user-images.githubusercontent.com/686194/159795633-67623aca-bf98-4e92-954f-3e1bbbcc8901.png)](https://design.fermyon.dev/)
 
 ## A live design reference manual for [Fermyon](https://fermyon.com)-related materials.
 
-> Styleguides are real-life pattern libraries, code standards documents and content style guides &mdash; [styleguides.io](http://styleguides.io/), a wonderful collection. 
+> Styleguides are real-life pattern libraries, code standards documents and content style guides &mdash; [styleguides.io](http://styleguides.io/), a wonderful collection.
 
-This styleguide is built as a living, working codebase rather than a simple reference document. It is published as an npm [package](https://www.npmjs.com/package/fermyon-styleguide), so it can be easily imported into other projects and applied as a baseline branded CSS layer.
+This styleguide is built as a living, working codebase rather than a simple reference document. It is published as an npm [package](https://www.npmjs.com/package/@fermyon/styleguide), so it can be easily imported into other projects and applied as a baseline branded CSS layer.
 
-The styleguide also contains a `/docs` page (visible [here](https://fermyon-styleguide.netlify.app/) as a website), which contains our brand guidelines, logos, and design resources.
-
+The styleguide also contains a `/docs` page (visible [here](https://design.fermyon.dev/) as a website), which contains our brand guidelines, logos, and design resources.
 
 ## Using The Styleguide
 
 #### 1. Add the styleguide to your project:
 
 ```
-npm install -D fermyon-styleguide
+npm install -D @fermyon/styleguide
 npm install
 ```
 
 #### 2. Once installed, the core `.scss` file can be imported into your project stylesheet as a dependency:
 
 ```
-@import "../../node_modules/fermyon-styleguide/scss/fermyon";
+@import "../../node_modules/@fermyon/styleguide/scss/fermyon";
 ```
 
 You can see examples of the styleguide being imported into other projects [here](https://github.com/fermyon/fermyon.com/blob/main/static/sass/styles.scss#L16) (fermyon.com site) and [here](https://github.com/fermyon/spin/blob/main/docs/static/sass/styles.scss#L16) (Spin docs).
@@ -31,7 +29,7 @@ You can see examples of the styleguide being imported into other projects [here]
 
 If your project requires the addition of special, localized styles (which is pretty common), they can be added to your stylesheet _underneath_ the imports shown above. You'll need to re-compile the styles to generate your CSS.
 
-This will likely require the addition of asset build configuration to your project &mdash; which depends on the particulars of which tools are being used to generate and run that site/app (for us, that usually means [Bartholomew](https://github.com/fermyon/bartholomew)). 
+This will likely require the addition of asset build configuration to your project &mdash; which depends on the particulars of which tools are being used to generate and run that site/app (for us, that usually means [Bartholomew](https://github.com/fermyon/bartholomew)).
 
 Example using [vanilla Sass](https://sass-lang.com/documentation/cli/dart-sass) ([see fermyon.com here](https://github.com/fermyon/fermyon.com/blob/main/package.json#L19)):
 
@@ -56,8 +54,7 @@ You can avoid working with Sass/Scss and just use the styleguide as-is by import
 <link rel="stylesheet" href="YOUR_PROJECT_FILEPATH/fermyon.css" />
 ```
 
-Note: the CSS should be linked *after* (i) the bulma.min.css  and (ii) Sen webfont CDN requests, as shown above.
-
+Note: the CSS should be linked _after_ (i) the bulma.min.css  and (ii) Sen webfont CDN requests, as shown above.
 
 ### Working on Styleguide
 
