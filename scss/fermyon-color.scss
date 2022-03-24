@@ -83,7 +83,9 @@ $darkblue:      $midblue;
    }
 }
 
-.is-active, .is-current {
-   color: white;
-   background-color: $darkspace;
+.content {
+   .is-active, .is-current {
+      color: white;
+      background-color: $darkspace;
+   }
 }

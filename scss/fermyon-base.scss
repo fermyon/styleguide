@@ -228,6 +228,7 @@ main {
 .menu-wrap {
     padding: 0 2.5vw;
     width: 17rem;
+    background: lighten($lightlavender, 5%);
 
     &.is-fixed-desktop {
         @media screen and (min-width: 1024px) {
@@ -236,6 +237,7 @@ main {
             top: 5.75rem;
             bottom: 0;
             width: 17.5vw;
+            background: lighten($lightlavender, 5%);
         }
     
         @media screen and (max-width: 1023px) {
@@ -250,7 +252,7 @@ main {
         @media screen and (min-width: 1024px) {
             position: sticky;
             left: 2.5vw;
-            top: 5.75rem;
+            top: 0;
             width: 15rem;
             padding-left: 0.67rem;
             bottom: 0;
@@ -258,6 +260,7 @@ main {
             vertical-align: top;
             max-height: 100vh;
             overflow-y: auto;
+            background: lighten($lightlavender, 5%);
         }
     }
 }
@@ -601,6 +604,11 @@ body.dark-theme {
             }
         }
 
+        .navbar-burger {
+            color: $lavender;
+            height: 5.75rem;
+        }
+
         .navbar-menu {
             a {
                 color: $seagreen;
@@ -626,6 +634,7 @@ body.dark-theme {
     }
 
     .menu-wrap {
+        background: $oxfordblue;
         &:hover {
             outline: 2px solid darken($lavender, 55%);
         }
