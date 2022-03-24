@@ -234,7 +234,7 @@ main {
         @media screen and (min-width: 1024px) {
             position: fixed;
             left: 0;
-            top: 5.75rem;
+            top: 0;
             bottom: 0;
             width: 17.5vw;
             background: lighten($lightlavender, 5%);
@@ -271,6 +271,8 @@ aside.menu {
     top: 0;
     bottom: 0;
     overflow-y: scroll;
+    padding-top: 6.5rem;
+    min-width: 13rem;
     width: 14.5vw;
     border-right: 2px solid transparent;
     @include transition;
