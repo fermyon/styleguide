@@ -879,6 +879,10 @@ body {
   font-size: 1.1rem !important;
 }
 
+.content blockquote a {
+  color: #0e8fdd;
+}
+
 .content pre, .content code {
   margin-bottom: 2rem !important;
 }
