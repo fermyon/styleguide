@@ -4,6 +4,7 @@
 
 html {
     height: 100%;
+    background-color: transparent;
 }
 body,
 main {
@@ -227,16 +228,58 @@ main {
 .menu-wrap {
     padding: 0 2.5vw;
     width: 17rem;
-    outline: 2px solid transparent;
-    @include transition;
+    background: lighten($lightlavender, 5%);
 
-    &:hover {
-        outline: 2px solid $lightlavender;
+    &.is-fixed-desktop {
+        @media screen and (min-width: 1024px) {
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 17.5vw;
+            background: lighten($lightlavender, 5%);
+        }
+    
+        @media screen and (max-width: 1023px) {
+            position: relative;
+            top: auto;
+            left: auto;
+            right: auto;
+        }
+    }
+
+    &.is-sticky {
+        @media screen and (min-width: 1024px) {
+            position: sticky;
+            left: 2.5vw;
+            top: 0;
+            width: 15rem;
+            padding-left: 0.67rem;
+            bottom: 0;
+            display: inline-block;
+            vertical-align: top;
+            max-height: 100vh;
+            overflow-y: auto;
+            background: lighten($lightlavender, 5%);
+        }
     }
 }
 
 aside.menu {
     font-size: 1rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    padding-top: 6.5rem;
+    min-width: 13rem;
+    width: 14.5vw;
+    border-right: 2px solid transparent;
+    @include transition;
+
+    &:hover {
+        border-right: 2px solid $lightlavender;
+    }
 
     .menu-label {
         padding-left: 1.333vw;
@@ -287,35 +330,10 @@ aside.menu {
             }
         }
     }
+}
 
-    &.is-fixed-desktop {
-        @media screen and (min-width: 1024px) {
-            position: fixed;
-            left: 5.5vw;
-            top: 12rem;
-        }
-    
-        @media screen and (max-width: 1023px) {
-            position: relative;
-            top: auto;
-            left: auto;
-            right: auto;
-        }
-    }
-
-    &.is-sticky {
-        @media screen and (min-width: 1024px) {
-            position: sticky;
-            left: 2.5vw;
-            top: 5.75rem;
-            padding-left: 0.67rem;
-            bottom: 0;
-            display: inline-block;
-            vertical-align: top;
-            max-height: 100vh;
-            overflow-y: auto;
-        }
-    }
+.menu-wrap + article.content {
+    padding-left: 18.5vw;
 }
 
 .page-wrap {
@@ -353,6 +371,33 @@ hr.page-break {
     .content {
         padding-top: 8.5rem;
         margin-bottom: 5rem;
+
+        h1 {
+            position: relative;
+            padding-bottom: 2.67rem;
+            margin: -1.5rem 0 5rem;
+            
+            &:after {
+                position: absolute;
+                width: 25%;
+                margin: 2rem 0 0;
+                display: inline-block;
+                margin: 2.5rem 0 0;
+                bottom: 0;
+                left: 0;
+                content: " ";
+                height: .33rem;
+                background: $lavender;
+                @include border-radius(0.33rem, 0.33rem);
+            }
+        }
+
+        blockquote {
+            p {
+                font-size: 1rem;
+                line-height: 1.4;
+            }
+        }
     
         .footer-nav {
             border-top: none;
@@ -521,6 +566,20 @@ footer {
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    html {
+        background: lighten($lightlavender, 5%);
+        color: $oxfordblue;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        background: $oxfordblue;
+        color: white;
+    }
+}
+
 body.dark-theme {
     background: $oxfordblue;
     color: white;
@@ -543,7 +602,13 @@ body.dark-theme {
 
             .tag {
                 background-color: $darkspace;
+                color: $lavender !important;
             }
+        }
+
+        .navbar-burger {
+            color: $lavender;
+            height: 5.75rem;
         }
 
         .navbar-menu {
@@ -571,20 +636,26 @@ body.dark-theme {
     }
 
     .menu-wrap {
-        &:hover {
-            outline: 2px solid darken($lavender, 55%);
-        }
+        background: $oxfordblue;
     }
 
     aside.menu {
-        left: 5vw;
+
+        &:hover {
+            border-right: 2px solid darken($lavender, 55%);
+        }
 
         a {
             color: white;
             
             &:hover {
-                color: $oxfordblue;
+                color: $seagreen;
                 background-color: $darkspace;
+            }
+
+            &.button svg,
+            &.button path {
+                fill: white !important;
             }
         }
     }
@@ -632,8 +703,8 @@ body.dark-theme {
             background-color: transparent;
 
             p {
-                background-color: lighten($darkspace, 2.5%);
-                border-color: lighten($darkspace, 7.5%);
+                background-color: darken($darkspace, 5%);
+                border-color: lighten($darkspace, 2.5%);
                 color: white;
             }
         }
@@ -643,6 +714,12 @@ body.dark-theme {
             background-color: lighten($darkspace, 2.5%);
             border-color: lighten($darkspace, 7.5%);
             color: white;
+        }
+
+        a {
+            &:hover {
+                background: darken($darkspace, 5%) !important;
+            }
         }
     }
 
