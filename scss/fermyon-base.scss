@@ -637,12 +637,13 @@ body.dark-theme {
 
     .menu-wrap {
         background: $oxfordblue;
-        &:hover {
-            outline: 2px solid darken($lavender, 55%);
-        }
     }
 
     aside.menu {
+
+        &:hover {
+            border-right: 2px solid darken($lavender, 55%);
+        }
 
         a {
             color: white;
