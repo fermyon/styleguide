@@ -580,7 +580,7 @@ footer {
     }
 }
 
-body.dark-theme {
+html.dark-theme > body {
     background: $oxfordblue;
     color: white;
 
