@@ -66,6 +66,51 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="//cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/headroom/0.12.0/headroom.min.js" integrity="sha512-9UsrKTYzS9smDm2E58MLs0ACtOki+UC4bBq4iK5wi7lJycwqcaiHxr1bdEsIVoK0l5STEzLUdYyDdFQ5OEjczw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+
+        // The default theme is the system theme, unless the user has
+        // explicitly overridden it.
+        var savedTheme = localStorage.getItem("theme") || systemTheme;
+        setTheme(savedTheme);
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const btn = document.querySelector(".dark-mode");
+            btn.addEventListener("click", () => {
+                if (savedTheme === "dark") {
+                    setTheme("light");
+                } else if (savedTheme === "light") {
+                    setTheme("dark");
+                }
+            });
+        })
+
+        // Change the website theme when the system theme changes.
+        window
+            .matchMedia("(prefers-color-scheme: dark)")
+            .addEventListener("change", (event) => {
+                if (event.matches) {
+                    setTheme("dark");
+                } else {
+                    setTheme("light");
+                }
+            });
+
+        // Change the website theme when a different tab changed it.
+        window.onstorage = () => {
+            // When local storage changes, update the theme.
+            setTheme(localStorage.getItem("theme"));
+        };
+
+
+        function setTheme(mode) {
+            localStorage.setItem("theme", mode);
+            savedTheme = mode;
+            document.documentElement.classList.toggle('dark-theme', mode === "dark");
+        }
+    </script>
 </head>
 <body>
     <header class="navbar is-transparent is-wide" id="topbar">
@@ -1357,53 +1402,6 @@ Sen, Europa, Avenir, system, -apple-system, ".SFNSText-Regular", "San Francisco"
         </div>
     </footer>
 
-    <script>
-        const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
-            ? "dark"
-            : "light";
-
-            // The default theme is the system theme, unless the user has
-            // explicitly overriden it.
-            var savedTheme = localStorage.getItem("theme") || systemTheme;
-            setTheme(savedTheme);
-
-            const btn = document.querySelector(".dark-mode");
-            btn.addEventListener("click", () => {
-            if(savedTheme === "dark") {
-                setTheme("light");
-            } else if(savedTheme === "light") {
-                setTheme("dark");
-            }
-            });
-
-            // Change the website theme when the system theme changes.
-            window
-            .matchMedia("(prefers-color-scheme: dark)")
-            .addEventListener("change", (event) => {
-                if (event.matches) {
-                setTheme("dark");
-                } else {
-                setTheme("light");
-                }
-            });
-
-            // Change the website theme when a different tab changed it.
-            window.onstorage = () => {
-            // When local storage changes, update the theme.
-            setTheme(localStorage.getItem("theme"));
-            };
-
-
-            function setTheme(mode) {
-            localStorage.setItem("theme", mode);
-            savedTheme = mode;
-            if (mode === "dark") {
-                document.body.classList.add('dark-theme');
-            } else if (mode === "light") {
-                document.body.classList.remove('dark-theme');
-            }
-        }
-    </script>
     <script>
         var header = new Headroom(document.querySelector("#topbar"), {
             tolerance: 5,
