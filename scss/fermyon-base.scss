@@ -128,7 +128,6 @@ main {
           border-radius: 50%;
           z-index: 600;
           opacity: 1;
-          animation: 4s ease infinite halfSpin;
           @include transition;
 
           em {
@@ -155,6 +154,12 @@ main {
           z-index: 400;
           background: transparent;
           @include transition;
+        }
+    }
+
+    &:hover {
+        .logo .spin-front {
+            animation: 4s ease infinite halfSpin;
         }
     }
 
