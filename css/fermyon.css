@@ -870,6 +870,10 @@ body {
   color: #0e8fdd;
 }
 
+.content iframe {
+  margin: 2rem 0;
+}
+
 .content pre, .content code {
   margin-bottom: 2rem !important;
 }
