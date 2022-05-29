@@ -439,5 +439,33 @@ html.dark-theme > body {
                 background: darken($darkspace, 5%) !important;
             }
         }
+
+        // dark mode tables
+        .table {
+
+            thead {
+                background-color: $darkplum;
+
+                th {
+                    background-color: $darkplum;
+                    border-color: darken($oxfordblue, 10%);
+                    color: darken($darkspace, 20%);
+                }
+            }
+
+            td {
+                border-color: darken($oxfordblue, 10%);
+                color: $lightlavender;
+            }
+
+            &.is-striped tbody tr:not(.is-selected):nth-child(2n) {
+                background-color: $darkspace;
+            }
+
+        }
+
+        .pagination-link, .pagination-next, .pagination-previous {
+            border-color: darken($oxfordblue, 10%);
+        }
     }
 }

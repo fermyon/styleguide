@@ -1207,6 +1207,29 @@ html.dark-theme > body .content a:hover {
   background: #1b2c4f !important;
 }
 
+html.dark-theme > body .content .table thead {
+  background-color: #525776;
+}
+
+html.dark-theme > body .content .table thead th {
+  color: #070c16;
+  background-color: #525776;
+  border-color: #040b15;
+}
+
+html.dark-theme > body .content .table td {
+  color: #ece5ee;
+  border-color: #040b15;
+}
+
+html.dark-theme > body .content .table.is-striped tbody tr:not(.is-selected):nth-child(2n) {
+  background-color: #213762;
+}
+
+html.dark-theme > body .content .pagination-link, html.dark-theme > body .content .pagination-next, html.dark-theme > body .content .pagination-previous {
+  border-color: #040b15;
+}
+
 @media screen and (max-width: 1023px) {
   #topbar.navbar .logo {
     width: 3rem;
