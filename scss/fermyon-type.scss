@@ -346,6 +346,11 @@ body {
             color: $colablue;
         }
 
+        > code {
+            background-color: transparent !important;
+            background-image: none !important;
+        }
+
         code.hljs {
             padding: 0 !important;
 
@@ -389,6 +394,50 @@ html.dark-theme > body {
 
         strong {
             color: $lightlavender;
+        }
+    }
+}
+
+
+// dark mode typography
+html.dark-theme > body {
+    
+    h1, h2, h3, h4, h5, p, li {
+        color: white;
+    }
+
+    pre {
+        background: linear-gradient(0, #173564 15%, lighten(desaturate(#173564, 12.5%), 3%) 100%);
+
+        code {
+            color: #DBC8E2;
+        }
+    }
+
+    .content {
+        
+        // dark mode code color baseline
+        h1, h2, h3, h4, h5, p, li, th, td, dd  {
+            code {
+                background-color: $darkspace;
+                color: $lightlavender;
+            }
+        }
+
+        .hljs {
+            color: #D2C3D7;
+        }
+
+        .hljs-comment,
+        .hljs-quote {
+            color: #AFAFAC;
+        }
+
+        // dark mode links 
+        a {
+            &:hover {
+                background: darken($darkspace, 5%) !important;
+            }
         }
     }
 }

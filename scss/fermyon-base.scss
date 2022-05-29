@@ -589,9 +589,7 @@ html.dark-theme > body {
     background: $oxfordblue;
     color: white;
 
-    h1, h2, h3, h4, h5, p, li {
-        color: white;
-    }
+   
 
     #topbar.navbar {
         background: $oxfordblue;
@@ -642,6 +640,7 @@ html.dark-theme > body {
 
     .menu-wrap {
         background: $oxfordblue;
+        scrollbar-color: $darkplum, darken($oxfordblue, 5%);
     }
 
     aside.menu {
@@ -665,10 +664,6 @@ html.dark-theme > body {
         }
     }
 
-    pre {
-        background: linear-gradient(0, #173564 15%, lighten(desaturate(#173564, 12.5%), 3%) 100%);
-    }
-
     .card {
         background: linear-gradient(0, lighten($oxfordblue, 5%), $oxfordblue 100%);
         box-shadow: 0 .5em 1em -.125em rgba(10,10,10,.5),
@@ -689,13 +684,6 @@ html.dark-theme > body {
         .box {
             background-color: $darkspace;
             color: white;
-        }
-        
-        h1, h2, h3, h4, h5, p, li, th, td, dd  {
-            code {
-                background-color: $darkspace;
-                color: $lightlavender;
-            }
         }
 
         section {
@@ -719,12 +707,6 @@ html.dark-theme > body {
             background-color: lighten($darkspace, 2.5%);
             border-color: lighten($darkspace, 7.5%);
             color: white;
-        }
-
-        a {
-            &:hover {
-                background: darken($darkspace, 5%) !important;
-            }
         }
     }    
 

@@ -645,10 +645,6 @@ html.dark-theme > body {
   background: #0d203f;
 }
 
-html.dark-theme > body h1, html.dark-theme > body h2, html.dark-theme > body h3, html.dark-theme > body h4, html.dark-theme > body h5, html.dark-theme > body p, html.dark-theme > body li {
-  color: #fff;
-}
-
 html.dark-theme > body #topbar.navbar {
   background: #0d203f;
   border-color: #0a455a;
@@ -692,6 +688,7 @@ html.dark-theme > body #topbar.navbar .dark-mode svg {
 }
 
 html.dark-theme > body .menu-wrap {
+  scrollbar-color: #525776, #09152a;
   background: #0d203f;
 }
 
@@ -710,10 +707,6 @@ html.dark-theme > body aside.menu a:hover {
 
 html.dark-theme > body aside.menu a.button svg, html.dark-theme > body aside.menu a.button path {
   fill: #fff !important;
-}
-
-html.dark-theme > body pre {
-  background: linear-gradient(0, #173564 15%, #233e68 100%);
 }
 
 html.dark-theme > body .card {
@@ -736,11 +729,6 @@ html.dark-theme > body .content .box {
   background-color: #213762;
 }
 
-html.dark-theme > body .content h1 code, html.dark-theme > body .content h2 code, html.dark-theme > body .content h3 code, html.dark-theme > body .content h4 code, html.dark-theme > body .content h5 code, html.dark-theme > body .content p code, html.dark-theme > body .content li code, html.dark-theme > body .content th code, html.dark-theme > body .content td code, html.dark-theme > body .content dd code {
-  color: #ece5ee;
-  background-color: #213762;
-}
-
 html.dark-theme > body .content section table {
   background-color: #213762;
 }
@@ -759,10 +747,6 @@ html.dark-theme > body .content blockquote > blockquote p, html.dark-theme > bod
   color: #fff;
   background-color: #243c6c;
   border-color: #2b477f;
-}
-
-html.dark-theme > body .content a:hover {
-  background: #1b2c4f !important;
 }
 
 html.dark-theme > body footer {
@@ -1090,6 +1074,11 @@ body {
   color: #0e8fdd;
 }
 
+.content pre > code, .content code > code {
+  background-color: #0000 !important;
+  background-image: none !important;
+}
+
 .content pre code.hljs, .content code code.hljs {
   padding: 0 !important;
 }
@@ -1187,6 +1176,35 @@ html.dark-theme > body .content a, html.dark-theme > body article a {
 
 html.dark-theme > body .content strong, html.dark-theme > body article strong {
   color: #ece5ee;
+}
+
+html.dark-theme > body h1, html.dark-theme > body h2, html.dark-theme > body h3, html.dark-theme > body h4, html.dark-theme > body h5, html.dark-theme > body p, html.dark-theme > body li {
+  color: #fff;
+}
+
+html.dark-theme > body pre {
+  background: linear-gradient(0, #173564 15%, #233e68 100%);
+}
+
+html.dark-theme > body pre code {
+  color: #dbc8e2;
+}
+
+html.dark-theme > body .content h1 code, html.dark-theme > body .content h2 code, html.dark-theme > body .content h3 code, html.dark-theme > body .content h4 code, html.dark-theme > body .content h5 code, html.dark-theme > body .content p code, html.dark-theme > body .content li code, html.dark-theme > body .content th code, html.dark-theme > body .content td code, html.dark-theme > body .content dd code {
+  color: #ece5ee;
+  background-color: #213762;
+}
+
+html.dark-theme > body .content .hljs {
+  color: #d2c3d7;
+}
+
+html.dark-theme > body .content .hljs-comment, html.dark-theme > body .content .hljs-quote {
+  color: #afafac;
+}
+
+html.dark-theme > body .content a:hover {
+  background: #1b2c4f !important;
 }
 
 @media screen and (max-width: 1023px) {
