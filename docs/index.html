@@ -263,7 +263,7 @@
                         A visual reference manual<br>
                         for <a href="https://www.fermyon.com">Fermyon</a> related materials.
                         <br><br>
-                        <code class="copy is-size-4" style="padding-right: 2.5rem; margin-left: 0rem">
+                        <code class="copy is-size-2" style="padding-right: 2.5rem; margin-left: 0rem; font-weight: normal;">
                             <span id="npminstall">npm install -D @fermyon/styleguide</span>
                             <button class="button copy-button" data-clipboard-target="#npminstall">
                                 <img src="../image/icon-copy.svg" alt="Copy to clipboard" />
@@ -839,7 +839,66 @@ Sen, Europa, Avenir, system, -apple-system, ".SFNSText-Regular", "San Francisco"
                         <li><code>.size-18</code></li>
                         <li><code>.size-20</code></li>
                     </ul>
+
+                    <h3>Code Blocks</h3>
+
+                    <p>Displaying legibile, easily parsable chunks of code is very important in our work - in blog posts, docs, etc. Typically we use a <code>monospaced</code> font stack, well-spaced lines and additional syntax highlighting via <a href="https://github.com/highlightjs/highlight.js/">Highlight.js</a></p>
+
+<pre><code>SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace</code></pre>
+
+                    <h4>Code Examples:</h4>
+
+                    <p>Bash Example</p>
+                    
+<pre><code class="language-console hljs language-shell"><span class="hljs-meta">$ </span><span class="language-bash">spin templates install --git https://github.com/fermyon/spin --branch v0.2.0</span>
+Copying remote template source
+Installing template redis-rust...
+Installing template http-rust...
+Installing template http-go...
++--------------------------------------------------+
+| Name         Description                         |
++==================================================+
+| http-go      HTTP request handler using (Tiny)Go |
+| http-rust    HTTP request handler using Rust     |
+| redis-rust   Redis message handler using Rust    |
+| ...                                              |
++--------------------------------------------------+</code></pre>
+
+                    <p>TOML Example</p>
+
+<pre><code class="language-toml hljs language-ini"><span class="hljs-attr">spin_version</span> = <span class="hljs-string">"1"</span>
+<span class="hljs-attr">description</span> = <span class="hljs-string">"A simple Spin HTTP component in Rust"</span>
+<span class="hljs-attr">name</span> = <span class="hljs-string">"spin-hello-world"</span>
+<span class="hljs-attr">trigger</span> = { type = <span class="hljs-string">"http"</span>, base = <span class="hljs-string">"/"</span> }
+<span class="hljs-attr">version</span> = <span class="hljs-string">"0.1.0"</span>
+
+<span class="hljs-section">[[component]]</span>
+<span class="hljs-attr">id</span> = <span class="hljs-string">"spin-hello-world"</span>
+<span class="hljs-attr">source</span> = <span class="hljs-string">"target/wasm32-wasi/release/spin_hello_world.wasm"</span>
+<span class="hljs-section">[component.trigger]</span>
+<span class="hljs-attr">route</span> = <span class="hljs-string">"/hello"</span>
+<span class="hljs-section">[component.build]</span>
+<span class="hljs-attr">command</span> = <span class="hljs-string">"cargo build --target wasm32-wasi --release"</span>
+</code></pre>
+                        <p>Rust Example</p>
+
+<pre><code class="language-rust hljs"><span class="hljs-keyword">use</span> anyhow::<span class="hljs-type">Result</span>;
+    <span class="hljs-keyword">use</span> spin_sdk::{
+        http::{Request, Response},
+        http_component,
+    };
+    
+    <span class="hljs-comment">/// A simple Spin HTTP component.</span>
+    <span class="hljs-meta">#[http_component]</span>
+    <span class="hljs-keyword">fn</span> <span class="hljs-title function_">spin_hello_world</span>(req: Request) <span class="hljs-punctuation">-&gt;</span> <span class="hljs-type">Result</span>&lt;Response&gt; {
+        <span class="hljs-built_in">println!</span>(<span class="hljs-string">"{:?}"</span>, req.<span class="hljs-title function_ invoke__">headers</span>());
+        <span class="hljs-title function_ invoke__">Ok</span>(http::Response::<span class="hljs-title function_ invoke__">builder</span>()
+            .<span class="hljs-title function_ invoke__">status</span>(<span class="hljs-number">200</span>)
+            .<span class="hljs-title function_ invoke__">header</span>(<span class="hljs-string">"foo"</span>, <span class="hljs-string">"bar"</span>)
+            .<span class="hljs-title function_ invoke__">body</span>(<span class="hljs-title function_ invoke__">Some</span>(<span class="hljs-string">"Hello, Fermyon"</span>.<span class="hljs-title function_ invoke__">into</span>()))?)
+    }</code></pre>
                 </section>
+
                 
                 <section id="logo">
                     <hr class="page-break">
