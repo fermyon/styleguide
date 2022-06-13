@@ -26,13 +26,6 @@
     <link rel="mask-icon" href="../image/icon/safari-pinned-tab.svg" color="#0d203f" />
     <meta name="msapplication-TileColor" content="#0d203f" />
     <meta name="theme-color" content="#ffffff" />
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"
-    integrity="sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-    />
     <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../scss/fermyon.scss" />
 
@@ -147,7 +140,7 @@
 
             <div class="logo-project">
                 <a href="#">
-                    Styleguide 
+                    Styleguide
                     <span class="tag is-primary is-light is-hidden-touch">v0.1.6</span>
                 </a>
             </div>
@@ -189,7 +182,7 @@
 
             <div class="menu-wrap is-narrow is-fixed-desktop" id="docsMenu">
                 <aside class="menu">
-                
+
                     <p class="menu-label">
                         Branding
                     </p>
@@ -224,7 +217,7 @@
                     </ul>
                 </aside>
             </div>
-            
+
             <article class="column content content-docs styleguide">
                 <section id="intro" style="padding-top: 8.25rem; ">
                     <svg width="82.5%" viewBox="0 0 3630 962" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -257,7 +250,7 @@
                         <path d="M501 622H540L496 637.5L501 622Z" fill="#EF946C"/>
                         <rect x="2592.95" y="924.042" width="27" height="27" transform="rotate(-45 2592.95 924.042)" fill="white" stroke="#0E8FDD" stroke-width="7"/>
                     </svg>
-                        
+
                     <!-- <h1 class="is-size-1">Styleguide</h1> -->
                     <h2 class="lead" style="font-size: 2.33vw !important;">
                         A visual reference manual<br>
@@ -476,7 +469,7 @@ RGB (color) value</pre>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="column is-one-quarter">
                             <div class="card card-color rust is-narrow">
                                 <div class="card-image">
@@ -650,7 +643,7 @@ RGB (color) value</pre>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="column is-one-quarter">
                             <div class="card card-color rust is-narrow">
                                 <div class="card-image">
@@ -738,7 +731,7 @@ RGB (color) value</pre>
 
                     <p>This is the baseline brand palette, which should be referred to when creating new designs for Fermyon</p>
                 </section>
-                
+
                 <section id="type">
                     <h1>Typography</h1>
 
@@ -787,7 +780,7 @@ RGB (color) value</pre>
                     <h2>Loading Webfonts</h2>
 
                     <p>To reduce the size of assets being served, it's best to leverage a CDN where possible. Hence the Styleguide does not contain the bundled up webfont files alongside the images and other assets.</p>
-                    
+
                     <pre>
 &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
 &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
@@ -817,17 +810,17 @@ Sen, Europa, Avenir, system, -apple-system, ".SFNSText-Regular", "San Francisco"
                             <a href="#ui">Full set of examples &rarr;</a>
                         </div>
                     </div>
-                    
+
 
                     <h3>Baseline Text Size</h3>
                     <p>The styleguide sets a root <code>font-size</code> of 16px, which is a conservative baseline, chosen to prioritize the presentation of technical content and long-form articles.</p>
 
                     <p>In different contexts, this should adjust to suit the user's situation.</p>
-                    
+
                     <p>For example, a technical documentation page benefits from a <em>wider</em> content width and tighter vertical spacing to accommodate example code snippets; more akin to a legible appliance manual than a traditional book orientation.</p>
 
                     <p>Blog articles on the other hand; benefit greatly from a bigger type size, along with a careful balance of width and spacing that mirrors the flow of a printed page (or that of an e-reader).</p>
-                    
+
                     <p>All of this is important for minimizing the effort required of the user to parse, skim and flow through the various lines of content you are presenting to them. Consider their <em></em>mode</em>, and tailor the <a href="https://zellwk.com/blog/why-vertical-rhythms/">Vertical Rhythm</a> and <a href="https://www.gridlover.net/try">Typesetting</a> accordingly when you can.</p>
 
                     <h3>Modifiers</h3>
@@ -849,7 +842,7 @@ Sen, Europa, Avenir, system, -apple-system, ".SFNSText-Regular", "San Francisco"
                     <h4>Code Examples:</h4>
 
                     <p>Bash Example</p>
-                    
+
 <pre><code class="language-console hljs language-shell"><span class="hljs-meta">$ </span><span class="language-bash">spin templates install --git https://github.com/fermyon/spin --branch v0.2.0</span>
 Copying remote template source
 Installing template redis-rust...
@@ -887,7 +880,7 @@ Installing template http-go...
         http::{Request, Response},
         http_component,
     };
-    
+
     <span class="hljs-comment">/// A simple Spin HTTP component.</span>
     <span class="hljs-meta">#[http_component]</span>
     <span class="hljs-keyword">fn</span> <span class="hljs-title function_">spin_hello_world</span>(req: Request) <span class="hljs-punctuation">-&gt;</span> <span class="hljs-type">Result</span>&lt;Response&gt; {
@@ -899,10 +892,10 @@ Installing template http-go...
     }</code></pre>
                 </section>
 
-                
+
                 <section id="logo">
                     <hr class="page-break">
-                    
+
                     <h1>Logo</h1>
 
                     <p><img src="https://user-images.githubusercontent.com/686194/158033683-d0a096f7-ac4b-4052-97ab-ad8378aee70f.png" alt="Introducing the Fermyon Logo" /></p>
@@ -919,7 +912,7 @@ Installing template http-go...
                                 <p><img src="../image/logo.svg" alt="Fermyon Logo" style="max-height: 3rem; margin:1rem 0 1rem 2rem;" /></p>
                             </td>
                             <td>
-                                The F "icon" logo 
+                                The F "icon" logo
                                 <br>
                                 <small><em>(without padding)</em></small>
                                 <br><br>
@@ -931,7 +924,7 @@ Installing template http-go...
                                 <p><img src="../image/avatar.png" alt="Fermyon Avatar" style="max-height: 6rem;" /></p>
                             </td>
                             <td>
-                                The F "icon" logo 
+                                The F "icon" logo
                                 <br>
                                 <small><em>(with padding)</em></small>
                                 <br><br>
@@ -1090,7 +1083,7 @@ Installing template http-go...
                         </div>
 
                     </div>
-                    
+
                     <aside>
                         <p>It's also worth looking at the many useful Bulma <a href="https://bulmatemplates.github.io/bulma-templates/">layout templates available here</a>, as well as Luc Perkins' <a href="https://github.com/lucperkins/bulma-dashboard">bulma-dashboard</a> project.</p>
                     </aside>
@@ -1114,7 +1107,7 @@ Installing template http-go...
                     <p>For additional sizing options, see the <a href="https://bulma.io/documentation/helpers/typography-helpers/">bulma docs here</a>.</p>
 
                     <p>Cosby sweater iphone artisan, squid trust fund photo booth twee blog shoreditch single-origin coffee aesthetic jean shorts messenger bag brooklyn butcher. Iphone fap banksy next level put a bird on it, letterpress photo thundercats biodiesel fanny pack etsy banh mi wayfarers. Sustainable four loko dreamcatcher, vegan single-origin coffee yr cardigan biodiesel williamsburg thundercats salvia master cleanse terry richardson tumblr mcsweeney’s. Lomo gluten-free salvia you probably haven’t heard of them portland. Mlkshk jean shorts carles, etsy artisan farm-to-table sartorial williamsburg marfa PBR leggings trust fund. Mcsweeney’s banh mi lo-fi mustache, fixie cosby sweater tumblr twee fanny pack. Thundercats food truck vegan, hoodie irony artisan beard synth.</p>
-                    
+
                     <p><small><em>^ Hipster Ipsum</em>. Small text example.</small></p>
 
                     <h3>Colored text - good for <a href="https://bulma.io/documentation/components/message/">UI messages and alerts</a>.</h3>
@@ -1131,7 +1124,7 @@ Installing template http-go...
                     <p class="has-text-white">Text that has the <code>is-white</code> class.</p>
 
                     <p>For different color usages (background shades, inverted (dark mode) classes, etc view the docs for the <a href="https://bulma.io/documentation/helpers/color-helpers/">color helpers</a>.</p>
-                    
+
                     <h2>Panels &amp; Sections</h2>
 
                     <article class="message is-danger">
@@ -1152,11 +1145,11 @@ Installing template http-go...
                     <h2>Buttons</h2>
 
                     <p>Buttons have many different states of interaction, and can have different styles depending on their role. By default, Hippo buttons should be rounded and use the <code>is-normal</code> sizing.</p>
-                    
+
                     <p>
                         <button class="button is-rounded">Rounded</button>
                         <button class="button is-primary is-rounded">Rounded</button>
-                        <button class="button is-secondary is-rounded">Rounded</button>
+                        <button class="button is-link is-rounded">Rounded</button>
                         <button class="button is-info is-rounded">Rounded</button>
                         <button class="button is-success is-rounded">Rounded</button>
                         <button class="button is-danger is-rounded">Rounded</button>
@@ -1220,7 +1213,7 @@ Installing template http-go...
                     <button class="button is-danger" title="Disabled button" disabled>Disabled</button>
 
                     <h2>Tables</h2>
-                        
+
                     <div class="column">
                         <a class="button is-primary">
                             <span>Add New Data</span>
@@ -1317,7 +1310,7 @@ Installing template http-go...
                     <h1>Documentation Styles</h1>
 
                     <p>This styleguide is in itself an example of a Fermyon-themed documentation website.</p>
-                    
+
                     <p>Built on the <a href="https://bulma.io/">Bulma</a> grid system with some layout tweaks (like in the proportions of the left menu) and applying t, and other styles contained within this guide.</p>
 
                     <blockquote>
@@ -1367,14 +1360,14 @@ Installing template http-go...
                     </div>
 
                     <p>Visit <a href="https://get.slack.help/hc/en-us/articles/205166337-Customizing-your-Slack-theme">Customizing Your Slack Theme</a> for further instructions on custom themes.</p>
-                </section>                
+                </section>
 
                 <section id="slides">
                     <h1>Slides &amp; Document Templates</h1>
 
                     <p>File templates are a great starting point for making company documents and presentation decks.</p>
                     <br>
-                    
+
                     <div class="card column is-one-third">
                         <div class="card-image">
                             <a href="https://fermyontech-my.sharepoint.com/:p:/g/personal/ronan_fermyon_com/EQ5CHgYnNLJBqzyx2qu0a8kBxKTOY-ApVkvnCYyf1wmBsg?e=U1eBPC"><img src="https://user-images.githubusercontent.com/686194/157764095-c7cd36de-5a57-494d-a662-6131d7f67876.jpg" alt="Powerpoint Template" /></a>
@@ -1386,7 +1379,7 @@ Installing template http-go...
                                     <p class="is-size-6">.ppt</p>
                                 </div>
                             </div>
-                      
+
                             <div class="content is-size-6">
                                 A presentation template with editable title "splash" pages and a mixture of light and dark text slides.
                             </div>
@@ -1409,7 +1402,7 @@ Installing template http-go...
                     <h3>Where's the JavaScript?</h3>
                     <p>This styleguide is intentionally very light on JavaScript. It's common for modern front-end frameworks to be very opinionated about the interactive function in addition to the visual form. In many popular common style frameworks, it becomes a challenge to keep things light and to enables certain interactive parts (like dropdown menus) without importing multiple additional scripts (jquery, bootstrap.js, icon fonts). And typically the content being served only uses a tiny subset of the imports.</p>
 
-                    <p>At Fermyon, we want to keep our apps light and fast, so that they compile to small sizes and run without requiring a lot of additional libraries, scripts, webfonts, icons, etc. Hence this styleguide is focused on just the visual portion - different projects can build upon these building blocks and utilize other libraries as needed.</p>                    
+                    <p>At Fermyon, we want to keep our apps light and fast, so that they compile to small sizes and run without requiring a lot of additional libraries, scripts, webfonts, icons, etc. Hence this styleguide is focused on just the visual portion - different projects can build upon these building blocks and utilize other libraries as needed.</p>
 
                     <p><a href="https://bulma.io">Bulma</a> stays true to this, relying on progressive CSS methods for interactive elements like modal pop-up windows and dropdown menus (via the <code>data-target</code> selector attributes for example) and avoids taking on javascript dependencies.</p>
                 </section>
@@ -1437,7 +1430,7 @@ Installing template http-go...
                     </blockquote>
 
                     <p>The W3C's guidelines on <a href="https://www.w3.org/WAI/">Web Accessibility</a> form the underlying spec for constructing any pages for the web. We aim to adhere to AA standards as a base and ideally AAA standards in the presentation of our content.</p>
-                    
+
                     <ul>
                         <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines</a></li>
                         <li><a href="http://lamb.cc/typograph/">Measuring Typographic Scale &amp; Rythm</a></li>

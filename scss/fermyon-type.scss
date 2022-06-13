@@ -2,11 +2,10 @@
    Typography
 */
 
-body {
-    font-family: $sen;
-    font-size: 16pt;
-    color: $oxfordblue;
-}
+$family-sans-serif: $sen;
+$family-monospace: $mono;
+
+$body-font-size: 16pt;
 
 .content {
 
@@ -48,7 +47,7 @@ body {
 
         &.pagination-list {
             margin: 0;
-            
+
             li {
                 list-style: none;
                 margin: 0;
@@ -77,19 +76,11 @@ body {
 
         p {
             line-height: 1.8;
-            border: 1px solid $lightgray;
             font-size: 1.2rem;
-            background: $lightlemon;
             padding: 1.25rem 1.5rem !important;
             margin: 2.5em auto 5rem !important;
             text-align: left;
             border-radius: .667rem;
-            box-shadow: 0 3px 6px rgba(30,30,30,.125);
-            color: $oxfordblue;
-        }
-
-        a {
-            color: $colablue;
         }
     }
 
@@ -99,20 +90,12 @@ body {
         border-left: none;
 
         p {
-            color: darken($darkolive, 25%);
-            color: $darkblue;
             font-size: 1.1rem !important;
             line-height: 2;
             padding-right: 0 !important;
-            border-left: 4px solid $lightgray;
-            background: lighten($lightlavender, 3.5%);
             padding: 0.65rem 5% 0.65rem 2rem !important;
             margin: 1rem auto 1rem !important;
             text-align: left;
-        }
-
-        a {
-            color: $colablue;
         }
     }
 
@@ -156,19 +139,13 @@ body {
         }
     }
 
-    strong {
-        color: $oxfordblue;
-    }
-
     a {
-        color: darken($colablue, 12.5%);
         border-radius: 0.333em;
         position: relative;
 
         &:after {
             position: absolute;
             text-align: center;
-            background: $colablue;
             height: 0.125rem;
             content: " ";
             display: inline-block;
@@ -180,9 +157,6 @@ body {
         }
 
         &:hover {
-            background: rgba(255,255,255,0.67);
-            color: $colablue;
-
             &:after {
                 opacity: 1;
                 left: 5%;
@@ -200,7 +174,7 @@ body {
         text-align: left;
         height: 4rem;
         background: transparent;
-        
+
         &:after {
             position: relative;
             width: 12.5%;
@@ -229,12 +203,10 @@ body {
             border: none;
             opacity: 0;
             background: transparent;
-            
+
         }
 
         &:hover {
-            background: rgba(100,100,100,0.17);
-            
             .button {
                 opacity: 1;
             }
@@ -255,13 +227,11 @@ body {
             top: 75%;
             transform: perspective(1px) translateY(-50%);
             z-index: 860;
-            background: rgba(100,100,100,0.75);
             padding: 0.5rem 1rem;
             border-radius: 2rem;
             font-size: 1rem;
             font-weight: bold;
             opacity: 0;
-            color: white;
         }
 
         &:active {
@@ -277,8 +247,7 @@ body {
         p {
             margin: 0;
             line-height: 1.25;
-            color: $oxfordblue;
-            
+
             &.title {
                 margin-bottom: 0.5rem;
             }
@@ -299,12 +268,8 @@ body {
             figure.image {
                 border: 5px solid transparent;
                 @include transition;
-    
-                &:hover {
-                    border-color: white;
-                }
             }
-            
+
             .card-content {
                 padding: 0.5rem 0.5rem 1rem;
 
@@ -320,7 +285,7 @@ body {
 
     h1,
     h2,
-    h3, 
+    h3,
     h4,
     h5,
     p,
@@ -330,8 +295,6 @@ body {
     dd {
         code {
             border-radius: 0.33rem !important;
-            background: darken($lightlavender, 1.25%);
-            color: $darkblue;
         }
     }
 
@@ -339,43 +302,22 @@ body {
     code {
         margin-left: 0;
         border-radius: 0.67rem;
-        background-color: $oxfordblue;
-        background-image: linear-gradient(135deg, $oxfordblue 0%, lighten($oxfordblue, 3.33%) 100%);
-        color: white;
         font-size: 0.925rem;
-        color: $lavender;
         font-family: $mono;
-
-        a {
-            color: $colablue;
-        }
-
-        > code {
-            background-color: transparent !important;
-            background-image: none !important;
-        }
-
-        code.hljs {
-            padding: 0 !important;
-
-            .hljs-meta {
-                color: $seagreen;
-            } 
-        }
     }
 
     pre {
         margin: 1.333rem 0;
         max-width: 100%;
         position: relative;
+
+        code.hljs {
+            padding: 0 !important;
+        }
     }
 
     code {
         border-radius: 0 !important;
-    }
-
-    .hljs {
-        background-color: transparent !important;
     }
 
     /* highlight.js css */
@@ -383,93 +325,12 @@ body {
 }
 
 html.dark-theme > body {
-    background: $oxfordblue;
-    color: white;
-
-    h1, h2, h3, h4, p, li {
-        color: white;
-    }
-
-    .content,
-    article {
-        a {
-            color: $seagreen;
-        }
-
-        strong {
-            color: $lightlavender;
-        }
-    }
-}
-
-
-// dark mode typography
-html.dark-theme > body {
-    
-    h1, h2, h3, h4, h5, p, li {
-        color: white;
-    }
-
-    pre {
-        background: linear-gradient(0, #173564 15%, lighten(desaturate(#173564, 12.5%), 3%) 100%);
-
-        code {
-            color: #DBC8E2;
-        }
-    }
-
-    .content {
-        
-        // dark mode code color baseline
-        h1, h2, h3, h4, h5, p, li, th, td, dd  {
-            code {
-                background-color: $darkspace;
-                color: $lightlavender;
+    #topbar.navbar {
+        .dark-mode {
+            svg {
+                transform: rotate(180deg);
+                @include transition;
             }
-        }
-
-        .hljs {
-            color: #D2C3D7;
-        }
-
-        .hljs-comment,
-        .hljs-quote {
-            color: #AFAFAC;
-        }
-
-        // dark mode links 
-        a {
-            &:hover {
-                background: darken($darkspace, 5%) !important;
-            }
-        }
-
-        // dark mode tables
-        .table {
-
-            thead {
-                background-color: $darkplum;
-
-                th {
-                    background-color: $darkplum;
-                    border-color: darken($oxfordblue, 10%);
-                    color: darken($darkspace, 20%);
-                }
-            }
-
-            td {
-                border-color: darken($oxfordblue, 10%);
-                color: $lightlavender;
-            }
-
-            &.is-striped tbody tr:not(.is-selected):nth-child(2n) {
-                background-color: $darkspace;
-            }
-
-        }
-
-        .pagination-link, .pagination-next, .pagination-previous {
-            border-color: darken($oxfordblue, 10%);
         }
     }
 }

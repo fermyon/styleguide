@@ -1,0 +1,137 @@
+// Remapping Bulma Colors
+$primary: $oxfordblue;
+$link: darken($colablue, 12.5%);
+$link-hover: $colablue;
+$link-hover-border: rgba(255,255,255,0.67);
+$info: darken($lavender, 10%);
+$success: darken($midgreen, 10%);
+$warning: $rust;
+$danger: darken($rust, 25%);
+$light: darken($lightplum, 12.5%);
+$dark: $darkspace;
+
+$code: $lavender;
+$code-background: $oxfordblue;
+
+$pre: $lavender;
+$pre-background: $oxfordblue;
+
+$text: $oxfordblue;
+$body-background-color: lighten($lightlavender, 5%);
+
+$hr-background-color: rgba(100,100,100,.1);
+
+.content {
+	a {
+		&:after {
+			background: $colablue;
+		}
+	}
+
+	aside {
+		p {
+			background: $lightlemon;
+			border: 1px solid $lightgray;
+			box-shadow: 0 3px 6px rgba(30,30,30,.125);
+		}
+	}
+
+	blockquote {
+		p {
+			color: $midblue;
+			background: lighten($lightlavender, 3.5%);
+		}
+
+		a {
+			color: $colablue;
+		}
+	}
+
+	h2 {
+		code {
+			color: #345995;
+			background: #E9E1EB;
+		}
+	}
+
+	h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p,
+    li,
+    td,
+    th,
+    dd {
+        code {
+            background: darken($lightlavender, 1.25%);
+            color: $midblue;
+        }
+    }
+
+	pre,
+    code {
+        background-color: $oxfordblue;
+        background-image: linear-gradient(135deg, $oxfordblue 0%, lighten($oxfordblue, 3.33%) 100%);
+
+        a {
+            color: $colablue;
+        }
+
+        > code {
+            background-color: transparent !important;
+            background-image: none !important;
+        }
+
+        code.hljs.hljs-meta {
+            color: $seagreen;
+        }
+    }
+
+	.is-active, .is-current {
+		color: white;
+		background-color: $darkspace;
+	}
+
+	.card {
+		&.card-color {
+            figure.image {
+                &:hover {
+                    border-color: white;
+                }
+            }
+        }
+	}
+
+	.copy {
+		&:hover {
+			background: rgba(100,100,100,0.17);
+		}
+	}
+
+	.copy-button {
+		&:after {
+			color: white;
+			background: rgba(100,100,100,0.75);
+		}
+	}
+
+	.hljs {
+		color: #D2C3D7;
+		background: transparent;
+	}
+
+	.hljs-comment,
+	.hljs-quote {
+		color: #AFAFAC;
+	}
+}
+
+#topbar.navbar {
+	background-color: $body-background-color;
+}
+
+footer {
+    border-top: 1px solid $lavender;
+}

@@ -1,0 +1,265 @@
+html.dark-theme > body {
+	background: $oxfordblue;
+	color: white;
+
+	h1, h2, h3, h4, h5, p, li {
+        color: white;
+    }
+
+	a {
+		color: $seagreen;
+	}
+
+	.is-primary, .has-text-primary      { color: white !important; }
+	.is-link, .has-text-link            { color: $seagreen !important; }
+	.is-info, .has-text-info            { color: darken($lavender, 10%) !important; }
+	.is-success, .has-text-success      { color: darken($midgreen, 10%) !important; }
+	.is-warning, .has-text-warning      { color: $rust !important; }
+	.is-danger, .has-text-danger        { color: darken($rust, 25%) !important; }
+	.is-dark, .has-text-dark            { color: $darkspace !important; }
+	.is-light, .has-text-light          { color: darken($lightplum, 12.5%) !important; }
+
+	.button, .tag, .message {
+		background-color: $oxfordblue !important;
+		color: white !important;
+		border-color: white !important;
+
+		&.is-primary {
+			border-color: darken($oxfordblue, 10%) !important;
+			color: $seagreen !important;
+		}
+		&.is-link {
+			border-color: $seagreen !important;
+		}
+		&.is-info {
+			border-color: darken($lavender, 10%) !important;
+		}
+		&.is-success {
+			border-color: darken($midgreen, 10%) !important;
+		}
+		&.is-warning {
+			border-color: $rust !important;
+		}
+		&.is-danger {
+			border-color: darken($rust, 25%) !important;
+		}
+		&.is-dark {
+			border-color: $darkspace !important;
+		}
+		&.is-light {
+			border-color: darken($lightplum, 12.5%) !important;
+		}
+	}
+
+	.content,
+    article {
+		a {
+			color: $seagreen;
+		}
+
+        strong {
+            color: $lightlavender;
+        }
+    }
+
+	pre {
+        background: linear-gradient(0, #173564 15%, lighten(desaturate(#173564, 12.5%), 3%) 100%);
+
+        code {
+            color: #DBC8E2;
+        }
+    }
+
+    .content {
+
+        // dark mode code color baseline
+        h1, h2, h3, h4, h5, p, li, th, td, dd  {
+            code {
+                background-color: $darkspace;
+                color: $lightlavender;
+            }
+        }
+
+        .hljs {
+            color: #D2C3D7;
+        }
+
+        .hljs-comment,
+        .hljs-quote {
+            color: #AFAFAC;
+        }
+
+        // dark mode links
+        a {
+            &:hover {
+                background: darken($darkspace, 5%) !important;
+            }
+        }
+
+        // dark mode tables
+        .table {
+
+            thead {
+                background-color: $darkplum;
+
+                th {
+                    background-color: $darkplum;
+                    border-color: darken($oxfordblue, 10%);
+                    color: darken($darkspace, 20%);
+                }
+            }
+
+            td {
+                border-color: darken($oxfordblue, 10%);
+                color: $lightlavender;
+            }
+
+            &.is-striped tbody tr:not(.is-selected):nth-child(2n) {
+                background-color: $darkspace;
+            }
+
+        }
+
+        .pagination-link, .pagination-next, .pagination-previous {
+            border-color: darken($oxfordblue, 10%);
+        }
+    }
+
+	#topbar.navbar {
+		background: $oxfordblue;
+		border-color: $darkocean;
+
+		a {
+			color: $seagreen;
+		}
+
+		.logo {
+			svg, path {
+				fill: white !important;
+			}
+		}
+		.logo-project a {
+			color: $seagreen;
+
+			.tag {
+				background-color: $darkspace;
+				color: $lavender !important;
+			}
+		}
+
+		.navbar-burger {
+			color: $lavender;
+			height: 5.75rem;
+		}
+
+		.navbar-menu {
+
+			.button {
+				border: 3px solid $seagreen;
+
+				&:hover {
+					background: $seagreen !important;
+					color: $oxfordblue;
+				}
+			}
+		}
+
+		.dark-mode {
+			svg {
+				fill: $seagreen;
+				transform: rotate(180deg);
+				@include transition;
+			}
+		}
+	}
+
+	.menu-wrap {
+		background: $oxfordblue;
+		scrollbar-color: $darkplum, darken($oxfordblue, 5%);
+	}
+
+	aside.menu {
+
+		&:hover {
+			border-right: 2px solid darken($lavender, 55%);
+		}
+
+		a {
+			color: white;
+
+			&:hover {
+				color: $seagreen;
+				background-color: $darkspace;
+			}
+
+			&.button svg,
+			&.button path {
+				fill: white !important;
+			}
+		}
+	}
+
+	.card {
+		background: linear-gradient(0, lighten($oxfordblue, 5%), $oxfordblue 100%);
+		box-shadow: 0 .5em 1em -.125em rgba(10,10,10,.5),
+		0 0 0 1px rgba(10,10,10,.52);
+		outline: 1px solid rgba(255,255,255,0.2);
+		color: white;
+
+		figure.image {
+			border-bottom: 1px solid rgba(255,255,255,0.333);
+		}
+
+		p {
+			color: white;
+		}
+	}
+
+	.content {
+		.box {
+			background-color: $darkspace;
+			color: white;
+		}
+
+		section {
+			table {
+				background-color: $darkspace;
+			}
+		}
+
+		blockquote {
+			background-color: transparent;
+
+			p {
+				background-color: darken($darkspace, 5%);
+				border-color: lighten($darkspace, 2.5%);
+				color: white;
+			}
+		}
+
+		blockquote > blockquote p,
+		aside p {
+			background-color: lighten($darkspace, 2.5%);
+			border-color: lighten($darkspace, 7.5%);
+			color: white;
+		}
+	}
+
+	footer {
+		background: $oxfordblue;
+		border-color: $darkocean;
+		color: white;
+
+		h4 {
+			color: white;
+		}
+
+		.footer-nav {
+			border-color: darken($oxfordblue, 7.5%);
+		}
+
+		p, li, a {
+			color: $seagreen;
+		}
+	}
+}
