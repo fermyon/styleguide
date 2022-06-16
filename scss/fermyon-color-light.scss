@@ -37,9 +37,14 @@ $hr-background-color: rgba(100,100,100,.1);
 	}
 
 	blockquote {
+
+		blockquote {
+			border-left: transparent;
+		}
+
 		p {
 			color: $midblue;
-			background: lighten($lightlavender, 3.5%);
+			background: $lightlemon;
 		}
 
 		a {
