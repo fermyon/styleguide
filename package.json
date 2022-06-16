@@ -33,8 +33,8 @@
   "scripts": {
     "build": "parcel build docs/index.html",
     "dev": "parcel serve docs/index.html --open",
-    "styles": "parcel build scss/fermyon.scss --dist-dir css",
-    "watch": "parcel watch scss/fermyon.scss --dist-dir css"
+    "styles": "parcel build scss/fermyon.scss --dist-dir css --no-source-maps",
+    "watch": "parcel watch scss/fermyon.scss --dist-dir css --no-source-maps"
   },
   "devDependencies": {
     "@parcel/css": "^1.10.0",
