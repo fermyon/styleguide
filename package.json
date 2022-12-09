@@ -2,6 +2,7 @@
   "name": "@fermyon/styleguide",
   "version": "0.1.6",
   "homepage": "https://github.com/fermyon/styleguide",
+  "main": "scss/fermyon.scss",
   "author": {
     "name": "Ronan Flynn-Curran",
     "email": "ronan@fermyon.com",
