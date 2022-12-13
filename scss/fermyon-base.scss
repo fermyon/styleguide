@@ -244,7 +244,7 @@ main {
             width: 17.5vw;
             background: lighten($lightlavender, 5%);
         }
-    
+
         @media screen and (max-width: 1023px) {
             position: relative;
             top: auto;
@@ -359,7 +359,7 @@ hr.page-break {
     text-align: center;
     height: 4rem;
     background: transparent;
-    
+
     &:after {
         position: relative;
         width: 12.5%;
@@ -381,7 +381,7 @@ hr.page-break {
             position: relative;
             padding-bottom: 2.67rem;
             margin: -1.5rem 0 5rem;
-            
+
             &:after {
                 position: absolute;
                 width: 25%;
@@ -403,7 +403,7 @@ hr.page-break {
                 line-height: 1.4;
             }
         }
-    
+
         .footer-nav {
             border-top: none;
         }
@@ -424,7 +424,7 @@ hr.page-break {
     footer {
         padding-left: 2.5vw !important;
         padding-right: 2.5vw !important;
-        
+
         .footer-nav {
             padding: 0 0.75rem;
             margin: 0;
@@ -571,7 +571,7 @@ footer {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
     html {
         background: lighten($lightlavender, 5%);
         color: $oxfordblue;
@@ -589,7 +589,7 @@ html.dark-theme > body {
     background: $oxfordblue;
     color: white;
 
-   
+
 
     #topbar.navbar {
         background: $oxfordblue;
@@ -651,7 +651,7 @@ html.dark-theme > body {
 
         a {
             color: white;
-            
+
             &:hover {
                 color: $seagreen;
                 background-color: $darkspace;
@@ -708,7 +708,7 @@ html.dark-theme > body {
             border-color: lighten($darkspace, 7.5%);
             color: white;
         }
-    }    
+    }
 
     footer {
         background: $oxfordblue;

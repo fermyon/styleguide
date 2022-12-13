@@ -23,19 +23,29 @@
   "bugs": {
     "url": "https://github.com/fermyon/styleguide/issues"
   },
-  "dependencies": {
-    "parcel": "^2.6.2"
-  },
   "publishConfig": {
     "access": "public"
   },
+  "main": "scss/fermyon.scss",
+  "html": "dist/index.html",
+  "css": "css/fermyon.css",
+  "targets": {
+    "main": false,
+    "html": {
+      "source": "docs/index.html"
+    },
+    "css": {
+      "source": "scss/fermyon.scss",
+      "distDir": "./css",
+      "optimize": false
+    }
+  },
   "scripts": {
-    "build":  "parcel build docs/index.html",
-    "dev":    "parcel serve docs/index.html --open",
-    "styles": "parcel build scss/fermyon.scss --dist-dir css",
-    "watch": "parcel watch scss/fermyon.scss --dist-dir css"
+    "build":  "parcel build",
+    "dev":    "parcel serve --open"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "2.6.2"
+    "parcel": "^2.8.1",
+    "@parcel/transformer-sass": "^2.8.1"
   }
 }
