@@ -1,0 +1,7 @@
+title = "styleguide"
+base_url = ""
+about = "Fermyon's Brand Guide & Design Styleguide"
+
+[extra]
+copyright = "Ronan Flynn-Curran"
+github = "https://github.com/fermyon/styleguide"
