@@ -1,0 +1,27 @@
+name = "styleguide"
+spin_version = "1"
+version = "0.1.0"
+description = "Re-usable design elements and styles for Fermyon."
+trigger = { type = "http", base = "/" }
+
+[[component]]
+source = "modules/bartholomew.wasm"
+id = "bartholomew"
+files = [ "content/**/*", "templates/*", "scripts/*", "config/*", "shortcodes/*"]
+[component.trigger]
+route = "/..."
+
+[[component]]
+source = "modules/spin_static_fs.wasm"
+id = "fileserver"
+files = [ { source = "static/", destination = "/" } ]
+[component.trigger]
+route = "/static/..."
+
+[[component]]
+source = "modules/favicon.wasm"
+id = "favicon"
+files = [ { source = "static/image/icon/", destination = "/" } ]
+[component.trigger]
+route = "/favicon.ico"
+executor = { type = "wagi" }
