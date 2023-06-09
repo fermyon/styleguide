@@ -230,6 +230,60 @@ main {
     }
 }
 
+.announcement-banner+main {
+    padding-top: 12.25rem;
+
+    .menu-wrap {
+        aside.menu {
+            padding-top: 10rem;
+        }
+    }
+}
+#topbar.navbar.headroom--unpinned+.announcement-banner+main {
+    .menu-wrap {
+        aside.menu {
+            padding-top: 4.25rem;
+        }
+    }
+}
+
+.announcement-banner {
+    background-color: $seagreen;
+    background: rgb(46, 237, 217);
+    background: linear-gradient(45deg, rgba(46, 237, 217, 1) 0%, rgba(52, 232, 189, 1) 100%);
+    z-index: 900;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 6.25rem;
+    overflow-x: hidden;
+    transition: opacity;
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: center;
+    opacity: 1;
+    color: $oxfordblue;
+
+    &:hover {
+        background: lighten($seagreen, 7.5%);
+        opacity: 0.92;
+    }
+
+    a {
+        display: inline;
+        width: 100%;
+        color: $darkspace;
+    }
+}
+
+#topbar.navbar.topbar--pinned+.announcement-banner {
+    top: 6.75rem;
+}
+
+#topbar.navbar.headroom--unpinned+.announcement-banner {
+    top: 0.75rem;
+}
+
 .menu-wrap {
     padding: 0 2.5vw;
     width: 17rem;
