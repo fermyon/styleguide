@@ -24,7 +24,7 @@
     "url": "https://github.com/fermyon/styleguide/issues"
   },
   "dependencies": {
-    "parcel": "^2.6.2"
+    "parcel": "^2.9.2"
   },
   "publishConfig": {
     "access": "public"
@@ -36,6 +36,6 @@
     "watch": "parcel watch scss/fermyon.scss --dist-dir css"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "2.6.2"
+    "@parcel/transformer-sass": "2.9.2"
   }
 }
