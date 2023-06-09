@@ -1,4 +1,4 @@
 [build]
 base = "docs/"
-command = "npm install @parcel/transformer-sass && npx parcel run index.html"
+command = "npm install @parcel/transformer-sass && npx parcel serve index.html"
 publish = "dist"
