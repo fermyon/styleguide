@@ -1,4 +1,4 @@
 [build]
 base = "docs/"
-command = "parcel build index.html"
+command = "npx parcel build index.html"
 publish = "dist"
