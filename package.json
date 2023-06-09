@@ -32,7 +32,7 @@
     "styles": "parcel build scss/fermyon.scss --dist-dir css",
     "watch": "parcel watch scss/fermyon.scss --dist-dir css"
   },
-  "devDependencies": {
+  "dependencies": {
     "@parcel/transformer-sass": "2.9.2",
     "parcel": "^2.9.2"
   }
