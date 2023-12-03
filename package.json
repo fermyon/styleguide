@@ -1,39 +1,37 @@
 {
-  "name": "@fermyon/styleguide",
-  "version": "0.1.6",
-  "homepage": "https://github.com/fermyon/styleguide",
-  "author": {
-    "name": "Ronan Flynn-Curran",
-    "email": "ronan@fermyon.com",
-    "url": "https://fermyon.com"
-  },
-  "description": "Re-usable design elements and styles for Fermyon",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fermyon/styleguide.git"
-  },
-  "license": "Apache-2.0",
-  "keywords": [
-    "fermyon",
-    "styleguide",
-    "sass",
-    "design",
-    "responsive"
-  ],
-  "bugs": {
-    "url": "https://github.com/fermyon/styleguide/issues"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "scripts": {
-    "build": "parcel build docs/index.html",
-    "dev": "parcel serve docs/index.html --open",
-    "styles": "parcel build scss/fermyon.scss --dist-dir css",
-    "watch": "parcel watch scss/fermyon.scss --dist-dir css"
-  },
-  "devDependencies": {
-    "@parcel/transformer-sass": "2.9.2",
-    "parcel": "^2.9.2"
+    "name": "@fermyon/styleguide",
+    "version": "0.1.7",
+    "homepage": "https://github.com/fermyon/styleguide",
+    "author": {
+      "name": "Ronan Flynn-Curran",
+      "email": "ronan@fermyon.com",
+      "url": "https://fermyon.com"
+    },
+    "description": "Re-usable design elements and styles for Fermyon",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/fermyon/styleguide.git"
+    },
+    "license": "Apache-2.0",
+    "keywords": [
+      "fermyon",
+      "styleguide",
+      "sass",
+      "design",
+      "responsive"
+    ],
+    "bugs": {
+      "url": "https://github.com/fermyon/styleguide/issues"
+    },
+    "publishConfig": {
+      "access": "public"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.1",
+        "sass": "^1.66.1"
+    },
+    "scripts": {
+        "styles": "sass --watch static/sass/style.scss static/css/style.css"
+    }
   }
-}
+  
