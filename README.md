@@ -61,13 +61,14 @@ Note: the CSS should be linked _after_ (i) the bulma.min.css  and (ii) Sen webfo
 To build the styleguide assets, and open the `docs/index.html` page run:
 
 ```
+cd docs
 npm run dev
 ```
 
 If you just want to rebuild CSS your edits, run:
 
 ```
-npm run watch
+npm run styles
 ```
 
 Changes can be viewed and tested at [http://localhost:1234/](http://localhost:1234/).
