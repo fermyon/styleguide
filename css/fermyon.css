@@ -755,7 +755,7 @@ html.dark-theme > body footer p, html.dark-theme > body footer li, html.dark-the
    Typography
 */
 body {
-  font-family: Sen, Europa, Avenir, system, -apple-system, ".SFNSText-Regular", "San Francisco", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+  font-family: "Work Sans", Europa, Avenir, system, -apple-system, ".SFNSText-Regular", "San Francisco", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   font-size: 16pt;
   color: #0D203F;
 }
